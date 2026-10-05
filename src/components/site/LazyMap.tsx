@@ -56,13 +56,15 @@ export function LazyMap({
             </span>
             <span className="font-display text-xl font-bold">{ctaLabel}</span>
             <span className="text-sm font-semibold text-ink-soft">
-              4 C rue Hubert Delisle · Vavang&apos;Art · L&apos;Entre-Deux
+              4A rue Fortuné Hoarau · Vavang&apos;Art · L&apos;Entre-Deux
             </span>
           </button>
         )}
       </div>
       <div className="flex items-center justify-between gap-3 border-t-2 border-ink/10 bg-cream px-5 py-3.5">
-        <p className="text-sm font-semibold text-ink-soft">Vavang&apos;Art — 97414 L&apos;Entre-Deux</p>
+        <p className="text-sm font-semibold text-ink-soft">
+          4A rue Fortuné Hoarau — 97414 L&apos;Entre-Deux
+        </p>
         <a
           href={directionsUrl}
           target="_blank"

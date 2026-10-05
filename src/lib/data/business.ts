@@ -17,7 +17,7 @@ export const BUSINESS = {
     en: "Celebrating so-called “ugly” fruit and vegetables by turning surplus produce into homemade treats.",
   },
   address: {
-    street: "4 C rue Hubert Delisle",
+    street: "4A rue Fortuné Hoarau",
     place: "Vavang'Art",
     postalCode: "97414",
     city: "L'Entre-Deux",
@@ -56,13 +56,13 @@ export const BUSINESS = {
   geo: { lat: -21.2339, lng: 55.4704 },
   maps: {
     directions:
-      "https://www.google.com/maps/dir/?api=1&query=La+Gourmandise+des+Moches,+4C+Rue+Hubert+Delisle,+97414+L%27Entre-Deux,+La+Réunion",
+      "https://www.google.com/maps/dir/?api=1&query=La+Gourmandise+des+Moches,+4A+Rue+Fortun%C3%A9+Hoarau,+97414+L%27Entre-Deux,+La+Réunion",
     embed:
-      "https://www.google.com/maps?q=4C%20Rue%20Hubert%20Delisle,%2097414%20L%27Entre-Deux,%20La%20Réunion&output=embed",
+      "https://www.google.com/maps?q=4A%20Rue%20Fortun%C3%A9%20Hoarau,%2097414%20L%27Entre-Deux,%20La%20Réunion&output=embed",
   },
   napLine: {
-    fr: "4 C rue Hubert Delisle — Vavang'Art, 97414 L'Entre-Deux, La Réunion",
-    en: "4 C rue Hubert Delisle — Vavang'Art, 97414 L'Entre-Deux, Réunion Island",
+    fr: "4A rue Fortuné Hoarau, 97414 Entre Deux, La Réunion",
+    en: "4A rue Fortuné Hoarau, 97414 Entre Deux, Réunion Island",
   },
 } as const;
 

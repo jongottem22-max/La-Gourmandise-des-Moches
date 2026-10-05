@@ -95,7 +95,12 @@ export default async function AteliersPage({ params }: { params: Params }) {
                 <Phone className="size-5" aria-hidden="true" />
                 {dict.common.cta.book} — {BUSINESS.phone.display[lang]}
               </a>
-              <a href="/documents/atelier-confiture.pdf" target="_blank" rel="noopener noreferrer" className={btnSecondary}>
+              <a
+                href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/documents/atelier-confiture.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={btnSecondary}
+              >
                 {d.downloadFlyer}
               </a>
             </div>

@@ -95,7 +95,12 @@ export default async function DemarchePage({ params }: { params: Params }) {
               <h2 className="mt-5 font-display text-3xl font-black leading-tight tracking-tight">{d.producerTitle}</h2>
               <p className="mt-4 max-w-md text-lg leading-relaxed text-ink-soft">{d.producerText}</p>
               <div className="mt-8">
-                <a href={`${localizedPath(lang, "contact")}#producteurs`} className={btnPrimary} data-track="cta_click" data-track-label="demarche-producer">
+                <a
+                  href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${localizedPath(lang, "contact")}#producteurs`}
+                  className={btnPrimary}
+                  data-track="cta_click"
+                  data-track-label="demarche-producer"
+                >
                   {d.producerCta}
                   <ArrowRight className="size-5" aria-hidden="true" />
                 </a>
