@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { LOCALES, localizedPath, STATIC_ROUTES } from "@/lib/i18n";
 import { absoluteUrl } from "@/lib/utils";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   // The gallery remains available in the source for later, but is hidden from
   // the public sitemap while the page is being held back.

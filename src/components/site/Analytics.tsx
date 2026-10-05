@@ -3,37 +3,17 @@
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
-type TrackMeta = { label?: string | null } & Record<string, unknown>;
-
-function beacon(type: string, meta?: TrackMeta) {
-  try {
-    const body = JSON.stringify({
-      type,
-      path: window.location.pathname,
-      lang: document.documentElement.lang?.startsWith("en") ? "en" : "fr",
-      meta,
-    });
-    const blob = new Blob([body], { type: "application/json" });
-    if (navigator.sendBeacon && navigator.sendBeacon("/api/events", blob)) return;
-    void fetch("/api/events", { method: "POST", body, keepalive: true });
-  } catch {
-    /* analytics must never break UX */
-  }
-}
-
 /**
- * Privacy-first first-party analytics: page views + clicks on [data-track] elements.
- * No cookies, no fingerprint, no personal data. See TECHNICAL_ARCHITECTURE.md §7.
+ * Static-host edition: the site no longer ships a backend, so the old
+ * first-party analytics beacons to /api/events are gone (they would just 404).
+ *
+ * What remains is a UX-critical helper: lazy images inside a transformed
+ * iframe (the Arena/e2b preview) never intersect, so they never request their
+ * bytes. Force anything near the viewport to load.
  */
 export function Analytics() {
   const pathname = usePathname();
 
-  useEffect(() => {
-    beacon("page_view");
-  }, [pathname]);
-
-  // Lazy images inside a transformed iframe never intersect, so they never
-  // request their bytes. Force anything near the viewport to load.
   useEffect(() => {
     const wake = () => {
       const height = window.innerHeight || 800;
@@ -55,19 +35,6 @@ export function Analytics() {
       window.removeEventListener("resize", wake);
     };
   }, [pathname]);
-
-  useEffect(() => {
-    const onClick = (event: MouseEvent) => {
-      const target = event.target as HTMLElement | null;
-      const el = target?.closest?.("[data-track]");
-      if (!el) return;
-      const type = el.getAttribute("data-track");
-      if (!type) return;
-      beacon(type, { label: el.getAttribute("data-track-label") });
-    };
-    document.addEventListener("click", onClick, { capture: true });
-    return () => document.removeEventListener("click", onClick, { capture: true });
-  }, []);
 
   return null;
 }

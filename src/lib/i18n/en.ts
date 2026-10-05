@@ -430,6 +430,10 @@ export const en: Dictionary = {
       required: "Required field",
       invalidEmail: "Invalid email",
       privacy: "Your message goes straight to the shop team. No surprise newsletters, promise.",
+      channelsIntro:
+        "Pick a subject: your email app opens a pre-addressed message to the shop. All that's left to do is write.",
+      channelsFallback: "No email app handy? Copy our address:",
+      whatsappCta: "Chat on WhatsApp",
     },
     direct: {
       title: "Direct lines",

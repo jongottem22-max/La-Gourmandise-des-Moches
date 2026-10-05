@@ -69,8 +69,8 @@ export default async function LangLayout({
 
   return (
     <html lang={lang} data-scroll-behavior="smooth" className={`${fraunces.variable} ${karla.variable}`}>
-      <body className="min-h-svh">
-        <Script src="/menu.js" />
+          <body className="min-h-svh">
+        <Script src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/menu.js`} />
         <a href="#contenu" className="skip-link">
           {dict.nav.skip}
         </a>

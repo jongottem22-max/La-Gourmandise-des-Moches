@@ -5,7 +5,7 @@ import { BUSINESS } from "@/lib/data/business";
 import { pageMetadata } from "@/lib/metadata";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
-import { ContactForm } from "@/components/site/ContactForm";
+import { ContactChannels } from "@/components/site/ContactChannels";
 import { LazyMap } from "@/components/site/LazyMap";
 import { FacebookIcon, InstagramIcon } from "@/components/site/BrandIcons";
 
@@ -114,12 +114,12 @@ export default async function ContactPage({ params }: { params: Params }) {
             </div>
           </Reveal>
 
-          {/* Form */}
+          {/* Email & WhatsApp channels (static hosting — no server-side form) */}
           <Reveal delay={120}>
             <div className="rounded-[2rem] border-2 border-ink bg-paper p-6 shadow-sticker sm:p-9">
               <h2 className="font-display text-2xl font-black">{d.form.title}</h2>
               <div className="mt-6">
-                <ContactForm lang={lang} t={d.form} />
+                <ContactChannels lang={lang} t={d.form} />
               </div>
             </div>
           </Reveal>

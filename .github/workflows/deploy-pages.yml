@@ -1,0 +1,66 @@
+# Deploys the static export (out/) to GitHub Pages.
+#
+# Phase 1 (now): site at https://jongottem22-max.github.io/La-Gourmandise-des-Moches/
+#   → NEXT_PUBLIC_BASE_PATH=/La-Gourmandise-des-Moches (below).
+# Phase 2: once gourmandisedesmoches.fr DNS points to GitHub Pages (see
+#   README → "Domaine personnalisé"), set NEXT_PUBLIC_BASE_PATH to "" and add
+#   a public/CNAME file containing `gourmandisedesmoches.fr`, then push.
+#
+# NEXT_PUBLIC_SITE_URL always stays the final custom domain: canonical URLs,
+# sitemap and OG tags must reference the production origin, never the
+# temporary github.io sub-path.
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - arena/01a10cb8-la-gourmandise-des-moches
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_SITE_URL: https://gourmandisedesmoches.fr
+      NEXT_PUBLIC_BASE_PATH: /La-Gourmandise-des-Moches
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static export
+        run: npm run build
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./out
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -202,8 +202,7 @@ export const CATALOGUE_SECTIONS: CatalogueSection[] = [
 ];
 
 
-/** Images cropped from the matching product photographs inside the supplied catalogue PDF. */
-export const CATALOGUE_IMAGES: Record<string, string> = {
+const CATALOGUE_IMAGES_RAW: Record<string, string> = {
   'Confiture tomate aux agrumes': '/images/catalogue/confiture-tomate-aux-agrumes.jpg',
   'Confiture banane de Noël': '/images/catalogue/confiture-banane-de-noel.jpg',
   'Confiture pamplemousse à la banane': '/images/catalogue/confiture-pamplemousse-a-la-banane.jpg',
@@ -245,3 +244,16 @@ export const CATALOGUE_IMAGES: Record<string, string> = {
   'Soupe chouchou': '/images/catalogue/soupe-chouchou.jpg',
   'Achards citron': '/images/catalogue/achards-citron.jpg',
 };
+
+/**
+ * Images cropped from the matching product photographs inside the supplied
+ * catalogue PDF. Served from `public/`, which means the paths are NOT prefixed
+ * by Next's `basePath` automatically — so we add the build-time Pages sub-path
+ * (NEXT_PUBLIC_BASE_PATH, empty once the custom domain is live) ourselves.
+ */
+export const CATALOGUE_IMAGES: Record<string, string> = Object.fromEntries(
+  Object.entries(CATALOGUE_IMAGES_RAW).map(([name, path]) => [
+    name,
+    `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`,
+  ]),
+);

@@ -430,6 +430,10 @@ export const fr = {
       required: "Champ requis",
       invalidEmail: "E-mail invalide",
       privacy: "Votre message est transmis à l'équipe de la boutique. Pas de newsletter surprise, promis.",
+      channelsIntro:
+        "Choisissez un sujet : votre logiciel e-mail s'ouvre avec un message déjà adressé à la boutique. Vous n'avez plus qu'à écrire.",
+      channelsFallback: "Pas de logiciel e-mail sous la main ? Copiez notre adresse :",
+      whatsappCta: "Discuter sur WhatsApp",
     },
     direct: {
       title: "Le direct",
