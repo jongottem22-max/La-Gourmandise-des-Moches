@@ -1,0 +1,514 @@
+@import "tailwindcss";
+
+@theme {
+  /* Official palette from PALETTE DES COULEURS.png */
+  --color-paper: #fff8f5;
+  --color-cream: #fffdf9;
+  --color-sand: #f7e2dd;
+  --color-ink: #2e2523;
+  --color-ink-soft: #655552;
+  --color-ink-faint: #947e78;
+  --color-leaf: #827321;
+  --color-leaf-deep: #5f5317;
+  --color-leaf-tint: #eee8c8;
+  --color-mango: #c8aa09;
+  --color-mango-tint: #f4ecc5;
+  --color-tomato: #cf3a29;
+  --color-tomato-deep: #a72a20;
+  --color-tomato-tint: #f4d0ca;
+  --color-goyave: #db9088;
+  --color-goyave-tint: #f3dedb;
+  --color-vanilla: #fae4de;
+
+  --font-display: "Georgia", "Times New Roman", serif;
+  --font-sans: "Trebuchet MS", "Segoe UI", sans-serif;
+
+  /* Softer editorial shadows built from the official olive tone. */
+  --shadow-sticker: 0.22rem 0.28rem 0 rgb(130 115 33 / 0.42);
+  --shadow-lift: 0 14px 34px -18px rgb(46 37 35 / 0.32);
+  --shadow-brand: 0 20px 46px -24px rgb(130 115 33 / 0.72);
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: var(--color-tomato) var(--color-paper);
+  /*
+   * next/font sets --font-karla / --font-fraunces. A bare var() with no
+   * fallback invalidates the whole font-family if those files 404 on a host,
+   * which drops the stack and widens the header enough to collide.
+   */
+  --font-sans: var(--font-karla, "Trebuchet MS"), "Trebuchet MS", "Segoe UI", sans-serif;
+  --font-display: var(--font-fraunces, Georgia), Georgia, "Times New Roman", serif;
+}
+
+/*
+ * Desktop header. Three grid columns so the phone pill can never paint on
+ * top of a nav link, regardless of viewport, zoom, or font metrics.
+ * The nav wraps inside its own cell; the phone stays nowrap in the tools cell.
+ */
+.site-header-bar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: "brand tools";
+  align-items: center;
+  column-gap: 0.75rem;
+  width: min(100%, 96rem);
+  margin-inline: auto;
+  min-height: 4rem;
+  padding: max(0.4rem, env(safe-area-inset-top)) max(0.75rem, env(safe-area-inset-right)) 0.4rem
+    max(0.75rem, env(safe-area-inset-left));
+}
+.site-header-brand {
+  grid-area: brand;
+  min-width: 0;
+}
+.site-header-tools {
+  grid-area: tools;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+.site-header-nav {
+  display: none;
+}
+.header-phone {
+  display: none;
+  align-items: center;
+  gap: 0.45rem;
+  flex: none;
+  white-space: nowrap;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+.header-phone svg {
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+}
+.site-header-toggle {
+  display: grid;
+  position: relative;
+  z-index: 2;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+.site-header-toggle svg,
+.menu-close svg {
+  pointer-events: none;
+}
+.site-header-toggle .icon-close {
+  display: none;
+}
+html:has(#mobile-menu-toggle:checked) .site-header-toggle .icon-open {
+  display: none;
+}
+html:has(#mobile-menu-toggle:checked) .site-header-toggle .icon-close {
+  display: block;
+}
+.menu-close {
+  display: grid;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+/* State lives on an uncontrolled checkbox so the sheet does not depend on a React render. */
+.mobile-menu-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (min-width: 64rem) {
+  .site-header-bar {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas: "brand nav tools";
+    column-gap: 1rem;
+    min-height: 4.5rem;
+    padding: 0.45rem 1.5rem;
+  }
+  .site-header-nav {
+    grid-area: nav;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.15rem 0.2rem;
+    min-width: 0;
+    padding-right: 0.35rem;
+  }
+  .site-header-nav a {
+    white-space: nowrap;
+  }
+  .header-phone {
+    display: inline-flex;
+  }
+  .site-header-toggle {
+    display: none;
+  }
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-mango);
+  color: var(--color-ink);
+}
+
+/* Visible focus, WCAG 2.2 AAA-ish target */
+:focus-visible {
+  outline: 3px solid var(--color-tomato);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Decorative language ─────────────────────────────────────────────── */
+
+/* Hand-drawn squiggle underline */
+.squiggle {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8 Q 12 2, 24 7 T 46 7 T 68 7 T 90 7 T 118 6' fill='none' stroke='%23cf3a29' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 0.32em;
+  padding-bottom: 0.14em;
+}
+
+.squiggle-leaf {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8 Q 12 2, 24 7 T 46 7 T 68 7 T 90 7 T 118 6' fill='none' stroke='%23827321' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 0.32em;
+  padding-bottom: 0.14em;
+}
+
+/* Torn paper edges between sections */
+.torn-top,
+.torn-bottom {
+  position: relative;
+}
+.torn-top::before,
+.torn-bottom::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 18px;
+  z-index: 2;
+  pointer-events: none;
+}
+.torn-top::before {
+  top: -17px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 18' preserveAspectRatio='none'%3E%3Cpath d='M0 18 L0 10 L38 14 L83 8 L137 13 L191 7 L244 12 L300 9 L355 14 L410 8 L466 13 L520 9 L577 14 L633 7 L688 12 L744 9 L799 13 L855 8 L910 14 L966 10 L1021 13 L1077 8 L1132 12 L1188 9 L1243 14 L1299 8 L1354 13 L1408 9 L1440 12 L1440 18 Z'/%3E%3C/svg%3E") repeat-x;
+  background-size: 1440px 18px;
+}
+.torn-bottom::after {
+  bottom: -17px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 18' preserveAspectRatio='none'%3E%3Cpath d='M0 0 L0 8 L38 4 L83 10 L137 5 L191 11 L244 6 L300 9 L355 4 L410 10 L466 5 L520 9 L577 4 L633 11 L688 6 L744 9 L799 5 L855 10 L910 4 L966 8 L1021 5 L1077 10 L1132 6 L1188 9 L1243 4 L1299 10 L1354 5 L1408 9 L1440 6 L1440 0 Z'/%3E%3C/svg%3E") repeat-x;
+  background-size: 1440px 18px;
+}
+
+/* Torn edges inherit the section background — set via CSS var */
+.torn-cream::before,
+.torn-cream::after {
+  filter: none;
+}
+.torn-cream::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 18' preserveAspectRatio='none'%3E%3Cpath fill='%23fffdf9' d='M0 18 L0 10 L38 14 L83 8 L137 13 L191 7 L244 12 L300 9 L355 14 L410 8 L466 13 L520 9 L577 14 L633 7 L688 12 L744 9 L799 13 L855 8 L910 14 L966 10 L1021 13 L1077 8 L1132 12 L1188 9 L1243 14 L1299 8 L1354 13 L1408 9 L1440 12 L1440 18 Z'/%3E%3C/svg%3E");
+}
+.torn-cream::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 18' preserveAspectRatio='none'%3E%3Cpath fill='%23fffdf9' d='M0 0 L0 8 L38 4 L83 10 L137 5 L191 11 L244 6 L300 9 L355 4 L410 10 L466 5 L520 9 L577 4 L633 11 L688 6 L744 9 L799 5 L855 10 L910 4 L966 8 L1021 5 L1077 10 L1132 6 L1188 9 L1243 4 L1299 10 L1354 5 L1408 9 L1440 6 L1440 0 Z'/%3E%3C/svg%3E");
+}
+.torn-ink::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 18' preserveAspectRatio='none'%3E%3Cpath fill='%232e2523' d='M0 18 L0 10 L38 14 L83 8 L137 13 L191 7 L244 12 L300 9 L355 14 L410 8 L466 13 L520 9 L577 14 L633 7 L688 12 L744 9 L799 13 L855 8 L910 14 L966 10 L1021 13 L1077 8 L1132 12 L1188 9 L1243 14 L1299 8 L1354 13 L1408 9 L1440 12 L1440 18 Z'/%3E%3C/svg%3E");
+}
+.torn-ink::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 18' preserveAspectRatio='none'%3E%3Cpath fill='%232e2523' d='M0 0 L0 8 L38 4 L83 10 L137 5 L191 11 L244 6 L300 9 L355 4 L410 10 L466 5 L520 9 L577 4 L633 11 L688 6 L744 9 L799 5 L855 10 L910 4 L966 8 L1021 5 L1077 10 L1132 6 L1188 9 L1243 4 L1299 10 L1354 5 L1408 9 L1440 6 L1440 0 Z'/%3E%3C/svg%3E");
+}
+.torn-leaf::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 18' preserveAspectRatio='none'%3E%3Cpath fill='%23827321' d='M0 18 L0 10 L38 14 L83 8 L137 13 L191 7 L244 12 L300 9 L355 14 L410 8 L466 13 L520 9 L577 14 L633 7 L688 12 L744 9 L799 13 L855 8 L910 14 L966 10 L1021 13 L1077 8 L1132 12 L1188 9 L1243 14 L1299 8 L1354 13 L1408 9 L1440 12 L1440 18 Z'/%3E%3C/svg%3E");
+}
+.torn-leaf::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 18' preserveAspectRatio='none'%3E%3Cpath fill='%23827321' d='M0 0 L0 8 L38 4 L83 10 L137 5 L191 11 L244 6 L300 9 L355 4 L410 10 L466 5 L520 9 L577 4 L633 11 L688 6 L744 9 L799 5 L855 10 L910 4 L966 8 L1021 5 L1077 10 L1132 6 L1188 9 L1243 4 L1299 10 L1354 5 L1408 9 L1440 6 L1440 0 Z'/%3E%3C/svg%3E");
+}
+
+/* Sticker / stamp badge */
+.stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.35em 0.85em;
+  border: 2.5px solid currentColor;
+  border-radius: 999px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  transform: rotate(-3deg);
+  background: var(--color-cream);
+  box-shadow: var(--shadow-sticker);
+}
+
+/* Wobbly blob masks for imagery */
+.blob-1 {
+  border-radius: 46% 54% 52% 48% / 54% 47% 53% 46%;
+}
+.blob-2 {
+  border-radius: 54% 46% 44% 56% / 46% 55% 45% 54%;
+}
+.blob-3 {
+  border-radius: 42% 58% 55% 45% / 58% 42% 58% 42%;
+}
+
+/* Dotted "cordon" rule (kitchen twine) */
+.cordon {
+  border: 0;
+  border-top: 3px dotted var(--color-ink-faint);
+  opacity: 0.5;
+}
+
+/* Marquee ribbon */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 36s linear infinite;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/*
+ * Scroll reveal is cosmetic only. Content is visible immediately.
+ * Starting at opacity:0 blanks every section below the hero when
+ * IntersectionObserver never fires (scaled iframes, WebKit, a failed
+ * hydration). That must not be possible.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal.is-in {
+    animation: reveal-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: var(--reveal-delay, 0ms);
+  }
+}
+@keyframes reveal-rise {
+  from {
+    transform: translateY(16px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+/* Gentle float for decorative doodles */
+.floaty {
+  animation: floaty 7s ease-in-out infinite;
+}
+.floaty-alt {
+  animation: floaty 9s ease-in-out infinite reverse;
+}
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--float-rot, 0deg));
+  }
+  50% {
+    transform: translateY(-10px) rotate(var(--float-rot, 0deg));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .floaty,
+  .floaty-alt {
+    animation: none;
+  }
+}
+
+/* Paper texture — subtle warm grain */
+.paper-grain {
+  background-image: radial-gradient(rgb(46 37 35 / 0.05) 1px, transparent 1.3px);
+  background-size: 18px 18px;
+}
+
+/* Card lift on hover (reduced-motion safe) */
+.lift {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.lift:hover,
+.lift:focus-within {
+  transform: translateY(-6px) rotate(-0.4deg);
+  box-shadow: var(--shadow-lift);
+}
+@media (prefers-reduced-motion: reduce) {
+  .lift,
+  .lift:hover,
+  .lift:focus-within {
+    transform: none;
+  }
+}
+
+/*
+ * Mobile navigation sheet.
+ * Rendered on document.body (see Header) so position:fixed is anchored to the
+ * viewport. Do not move this panel inside an ancestor with backdrop-filter,
+ * filter, transform, perspective, contain, or will-change — those properties
+ * become the containing block and collapse the sheet against the short bar.
+ */
+.mobile-nav-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: none;
+  height: auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  pointer-events: none;
+}
+html:has(#mobile-menu-toggle:checked) .mobile-nav-panel {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+@media (min-width: 64rem) {
+  html:has(#mobile-menu-toggle:checked) .mobile-nav-panel {
+    display: none !important;
+    pointer-events: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:has(#mobile-menu-toggle:checked) .mobile-nav-panel {
+    animation: mobile-nav-in 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+@keyframes mobile-nav-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  background: var(--color-ink);
+  color: var(--color-cream);
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: top 0.2s ease;
+}
+.skip-link:focus-visible {
+  top: 1rem;
+}
+
+/* ── Official brand palette polish ─────────────────────────────────────── */
+.brand-gradient {
+  background: linear-gradient(
+    90deg,
+    var(--color-tomato) 0 25%,
+    var(--color-goyave) 25% 50%,
+    var(--color-mango) 50% 75%,
+    var(--color-leaf) 75% 100%
+  );
+}
+
+.brand-hero {
+  background-color: var(--color-paper);
+  background-image:
+    radial-gradient(circle at 12% 18%, rgb(219 144 136 / 0.18), transparent 26%),
+    radial-gradient(circle at 88% 16%, rgb(200 170 9 / 0.18), transparent 24%),
+    radial-gradient(circle at 50% 105%, rgb(130 115 33 / 0.12), transparent 32%),
+    radial-gradient(rgb(46 37 35 / 0.045) 1px, transparent 1.3px);
+  background-size: auto, auto, auto, 18px 18px;
+}
+
+.brand-hero::after {
+  content: "";
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  left: 10%;
+  height: 4px;
+  border-radius: 999px 999px 0 0;
+  background: linear-gradient(90deg, var(--color-tomato), var(--color-goyave), var(--color-mango), var(--color-leaf));
+  opacity: 0.8;
+}
+
+.brand-palette {
+  display: flex;
+  width: min(100%, 15rem);
+  height: 0.6rem;
+  overflow: hidden;
+  border: 1px solid rgb(255 253 249 / 0.5);
+  border-radius: 999px;
+  box-shadow: 0 3px 0 rgb(0 0 0 / 0.12);
+}
+
+.brand-palette span {
+  flex: 1;
+}
+
+/* The official mustard/olive palette also becomes the visual language of
+   interactive cards, not just their background colors. */
+.lift:hover,
+.lift:focus-within {
+  box-shadow: var(--shadow-brand);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lift:hover,
+  .lift:focus-within {
+    box-shadow: var(--shadow-brand);
+  }
+}
+
+/* Restaurant feature panel: the olive tone anchors the food photography while
+   the rose and mustard glows keep the section warm and lively. */
+.restaurant-section {
+  background-color: var(--color-leaf);
+  background-image:
+    radial-gradient(circle at 88% 12%, rgb(219 144 136 / 0.28), transparent 24%),
+    radial-gradient(circle at 12% 82%, rgb(200 170 9 / 0.2), transparent 28%),
+    linear-gradient(135deg, var(--color-leaf-deep), var(--color-leaf) 52%, #76671b);
+}

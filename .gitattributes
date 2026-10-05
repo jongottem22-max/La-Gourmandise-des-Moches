@@ -1,0 +1,10 @@
+# Image binaries must never be treated as text (no EOL conversion, no diff)
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
+*.woff2 binary
+
+# Base64 recovery payloads are text — normalize EOL
+*.b64 text eol=lf
+*.json text eol=lf
