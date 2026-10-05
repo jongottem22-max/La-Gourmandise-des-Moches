@@ -1,0 +1,42 @@
+{
+  "atelier-mains.jpg": {
+    "sha256": "6a951915d2be54b6664ba78050d8b674126b474b5bc7f25d3a95d8c80dceb487",
+    "bytes": 203156
+  },
+  "boutique.jpg": {
+    "sha256": "6053a832ce26c7e1c14f4a8d6f247792942edcc38986e0f1442e2085f8dff3a4",
+    "bytes": 368111
+  },
+  "compotes.jpg": {
+    "sha256": "0bc235414bfbde40e27d39bbde0f2838b5319df418f105ae5666e2f7fac4c4a1",
+    "bytes": 166732
+  },
+  "confitures.jpg": {
+    "sha256": "2af8c49a571b3485b6f1eda9428842097e3feea3744c95a80afd69eaed5d92fa",
+    "bytes": 174988
+  },
+  "entre-deux.jpg": {
+    "sha256": "8aa45e324f38536087e235d3e72bda284cbd3497619e566965353de9440dcedf",
+    "bytes": 319854
+  },
+  "hero-moches.jpg": {
+    "sha256": "93f741af02a0161403df0077dad5a67dcbeb652515bc5c057b5608e4ab7d73a8",
+    "bytes": 234374
+  },
+  "jus-nectars.jpg": {
+    "sha256": "e3fbc47020cf4e5a8a3097ba9d1af16acddbd596b34a10e8b59ffc42c5724e4c",
+    "bytes": 250990
+  },
+  "ketchup-banane.jpg": {
+    "sha256": "1cdad625566d0acc50941a7969f71c586f9ba09ef8c52be0a8c472702a79dd9b",
+    "bytes": 215146
+  },
+  "sirops.jpg": {
+    "sha256": "e6fbd9f11acb9a163982992087053162715d1b4d586a944ca95109110cf0ed9e",
+    "bytes": 201460
+  },
+  "soupes.jpg": {
+    "sha256": "5b35e76b390e9ff8fb03151593bd15e466f01b141e9c805101ad7261c8773a1d",
+    "bytes": 214690
+  }
+}

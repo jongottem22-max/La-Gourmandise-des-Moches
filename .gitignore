@@ -1,0 +1,19 @@
+node_modules/
+.next/
+out/
+.vercel
+.netlify
+*.tsbuildinfo
+.DS_Store
+.env
+.env.local
+
+# Deploy-critical image assets must ALWAYS be committed — never ignore these:
+!public/images/
+!public/images/*.jpg
+!src/assets/images/
+!src/assets/images/*.jpg
+!design-assets/images/
+!design-assets/images/*.jpg
+!design-assets/base64/
+!design-assets/base64/*.b64

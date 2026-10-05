@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <!--
+    Root redirect. `output: "export"` cannot use next.config redirects, and a
+    locale-aware app/ page would require restructuring the [lang] root layout —
+    so this small static page (copied to out/index.html) sends / to ./fr/.
+    Relative links keep it working both under the temporary GitHub Pages
+    sub-path (github.io/La-Gourmandise-des-Moches/) and the apex domain.
+  -->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=./fr/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>La Gourmandise des Moches — redirection…</title>
+    <link rel="canonical" href="https://gourmandisedesmoches.fr/fr/" />
+    <style>
+      body { font-family: Georgia, "Times New Roman", serif; background: #fff8f5; color: #2b2118; display: grid; place-items: center; min-height: 90vh; margin: 0; }
+      main { text-align: center; max-width: 34rem; padding: 1rem; }
+      a { color: #c73e1d; font-weight: bold; }
+    </style>
+    <script>window.location.replace("./fr/");</script>
+  </head>
+  <body>
+    <main>
+      <h1>La Gourmandise des Moches</h1>
+      <p>
+        Redirection en cours… Si rien ne se passe :
+        <a href="./fr/" hreflang="fr">continuer en français</a> ·
+        <a href="./en/" hreflang="en">continue in English</a>
+      </p>
+    </main>
+  </body>
+</html>
