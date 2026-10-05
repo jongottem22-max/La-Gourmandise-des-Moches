@@ -79,7 +79,11 @@ export default async function ProduitsPage({ params }: { params: Params }) {
                 <h2 className="mt-4 font-display text-3xl font-black tracking-tight sm:text-4xl">{d.catalogueTitle}</h2>
                 <p className="mt-3 max-w-2xl text-lg leading-relaxed text-ink-soft">{d.catalogueSub}</p>
               </div>
-              <a href="/documents/catalogue-produits.pdf" download className={btnSecondary}>
+              <a
+                href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/documents/catalogue-produits.pdf`}
+                download
+                className={btnSecondary}
+              >
                 {d.downloadCatalogue}
               </a>
             </div>

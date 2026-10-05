@@ -495,7 +495,7 @@ export const en: Dictionary = {
       {
         heading: "Site publisher",
         body: [
-          "This site is published by the association La Gourmandise des Moches (French non-profit, loi 1901), SIREN 919 056 135, with its registered seat at 4C rue Hubert Delisle — Vavang'Art, 97414 L'Entre-Deux, Réunion Island, France.",
+          "This site is published by the association La Gourmandise des Moches (French non-profit, loi 1901), SIREN 919 056 135, with its registered seat at 4A rue Fortuné Hoarau, 97414 Entre Deux, Réunion Island, France.",
           "Phone: +262 692 55 35 72 · Email: contactgourmandisedesmoches@gmail.com",
         ],
       },
@@ -506,7 +506,7 @@ export const en: Dictionary = {
       {
         heading: "Hosting",
         body: [
-          "This site is hosted by Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, United States — www.netlify.com.",
+          "This site is hosted by GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, United States) — pages.github.com.",
         ],
       },
       {
@@ -538,7 +538,7 @@ export const en: Dictionary = {
       {
         heading: "Data controller",
         body: [
-          "The association La Gourmandise des Moches, 4C rue Hubert Delisle — Vavang'Art, 97414 L'Entre-Deux, Réunion Island — contactgourmandisedesmoches@gmail.com.",
+          "The association La Gourmandise des Moches, 4A rue Fortuné Hoarau, 97414 Entre Deux, Réunion Island — contactgourmandisedesmoches@gmail.com.",
         ],
       },
       {
@@ -565,7 +565,7 @@ export const en: Dictionary = {
       {
         heading: "Hosting & transfers",
         body: [
-          "The site is hosted by Netlify, Inc. (United States). A host's standard technical logs may apply; any transfers are governed by standard contractual clauses.",
+          "The site is hosted by GitHub Pages, a service of GitHub, Inc. (United States). A host's standard technical logs may apply; any transfers are governed by standard contractual clauses.",
         ],
       },
       {

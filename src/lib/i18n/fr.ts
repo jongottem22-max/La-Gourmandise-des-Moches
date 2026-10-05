@@ -495,7 +495,7 @@ export const fr = {
       {
         heading: "Éditeur du site",
         body: [
-          "Ce site est édité par l'association La Gourmandise des Moches (association loi 1901), SIREN 919 056 135, dont le siège est situé 4C rue Hubert Delisle — Vavang'Art, 97414 L'Entre-Deux, La Réunion, France.",
+          "Ce site est édité par l'association La Gourmandise des Moches (association loi 1901), SIREN 919 056 135, dont le siège est situé 4A rue Fortuné Hoarau, 97414 Entre Deux, La Réunion, France.",
           "Téléphone : 06 92 55 35 72 · E-mail : contactgourmandisedesmoches@gmail.com",
         ],
       },
@@ -506,7 +506,7 @@ export const fr = {
       {
         heading: "Hébergement",
         body: [
-          "Ce site est hébergé par Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis — www.netlify.com.",
+          "Ce site est hébergé par GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis) — pages.github.com.",
         ],
       },
       {
@@ -538,7 +538,7 @@ export const fr = {
       {
         heading: "Responsable de traitement",
         body: [
-          "L'association La Gourmandise des Moches, 4C rue Hubert Delisle — Vavang'Art, 97414 L'Entre-Deux, La Réunion — contactgourmandisedesmoches@gmail.com.",
+          "L'association La Gourmandise des Moches, 4A rue Fortuné Hoarau, 97414 Entre Deux, La Réunion — contactgourmandisedesmoches@gmail.com.",
         ],
       },
       {
@@ -565,7 +565,7 @@ export const fr = {
       {
         heading: "Hébergement et transferts",
         body: [
-          "Le site est hébergé par Netlify, Inc. (États-Unis). Les journaux techniques habituels d'un hébergeur peuvent s'appliquer ; les éventuels transferts sont encadrés par des clauses contractuelles types.",
+          "Le site est hébergé par GitHub Pages, un service de GitHub, Inc. (États-Unis). Les journaux techniques habituels d'un hébergeur peuvent s'appliquer ; les éventuels transferts sont encadrés par des clauses contractuelles types.",
         ],
       },
       {
