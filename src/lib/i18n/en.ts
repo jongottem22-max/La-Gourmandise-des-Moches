@@ -11,7 +11,7 @@ export const en: Dictionary = {
     tagline: "Ugly outside, wonderful inside.",
     defaultTitle: "La Gourmandise des Moches — Artisanal anti-waste preserves in L'Entre-Deux, Réunion Island",
     description:
-      "In L'Entre-Deux, Réunion Island, La Gourmandise des Moches turns “ugly” local fruit and vegetables into handmade jams, soups, nectars and syrups. Shop & workshop at Vavang'Art, open Tuesday to Sunday.",
+      "In L'Entre-Deux, Réunion Island, La Gourmandise des Moches turns “ugly” local fruit and vegetables into handmade jams, soups, nectars and syrups. Shop & workshop at 4A rue Fortuné Hoarau, open Sunday to Friday.",
     keywords:
       "Réunion Island local food, artisanal jam Réunion, food waste initiative Réunion, L'Entre-Deux, short supply chain preserves",
   },
@@ -95,7 +95,7 @@ export const en: Dictionary = {
     heroD: "joy.",
     heroSub:
       "Founded in August 2022 by Sandra Ramaye, the association celebrates so-called “ugly” fruit and vegetables. Surplus becomes jams, syrups, pickles, chutneys, compotes, nectars, soups, ketchup and other sauces, made by hand.",
-    heroHint: "Tue–Sun · 10 am–5 pm · Vavang'Art",
+    heroHint: "Sun–Fri · 9 am–5 pm · L'Entre-Deux",
     marquee: [
       "Bruised mangoes",
       "Overripe bananas",
@@ -117,7 +117,7 @@ export const en: Dictionary = {
         },
         {
           title: "Transformed by hand",
-          text: "Peeling, slow cooking and jarring all happen at Vavang'Art, with Creole-inspired and inventive recipes, small batches and even recycled jars.",
+          text: "Peeling, slow cooking and jarring all happen at the 4A rue Fortuné Hoarau workshop, with Creole-inspired and inventive recipes, small batches and even recycled jars.",
         },
         {
           title: "Good for the island",
@@ -131,7 +131,7 @@ export const en: Dictionary = {
       steps: [
         { title: "The surplus", text: "Unsold or downgraded harvests from growers across the island." },
         { title: "The purchase", text: "We buy at a fair price — the skip can stay empty." },
-        { title: "The transformation", text: "Sorting, chopping, cooking, jarring at Vavang'Art." },
+        { title: "The transformation", text: "Sorting, chopping, cooking, jarring at the workshop." },
         { title: "The treat", text: "Jars sold at the shop keep the social mission moving." },
       ],
     },
@@ -149,6 +149,7 @@ export const en: Dictionary = {
       priceLabel: "One price",
       priceSuffix: "per meal",
       dishKicker: "The dish that says it all",
+      sorbetKicker: "The frozen treat",
       points: [
         { title: "100% vegan, vegetarian and gluten-free", text: "Every plate is generous, meat-free and gluten-free, composed from whatever the island's growers have in surplus." },
         { title: "Eat in or take away", text: "At lunchtime, sit down with us… or grab your box and go." },
@@ -162,11 +163,11 @@ export const en: Dictionary = {
     boutique: {
       kicker: "The shop & workshop",
       title: "Come see where the jars are born.",
-      text: "In the heart of Vavang'Art, the artisan village of L'Entre-Deux, the shop smells of simmering sugar and ripe fruit. Browse the current batches, chat about rescue cooking, and maybe leave with a recipe.",
+      text: "In the heart of the village of L'Entre-Deux, at 4A rue Fortuné Hoarau, the shop smells of simmering sugar and ripe fruit. Browse the current batches, chat about rescue cooking, and maybe leave with a recipe.",
       points: [
         "Jams, soups, nectars, syrups and compotes of the moment",
         "Friendly advice — and the story behind every jar",
-        "A living craft venue, surrounded by Vavang'Art's creators",
+        "A living craft venue, surrounded by L'Entre-Deux's creators",
       ],
       hoursTitle: "Opening hours",
       addressTitle: "Address",
@@ -176,12 +177,12 @@ export const en: Dictionary = {
       kicker: "The jam-maker",
       title: "Sandra Ramaye, fruit rescuer.",
       quote: "“I hate food waste. An ugly fruit is never a bad fruit.”",
-      text: "Sandra Ramaye founded the association in August 2022 with one simple conviction: an ugly fruit is never a bad fruit. At Vavang'Art, surplus becomes jars, workshops and an invitation to taste differently.",
+      text: "Sandra Ramaye founded the association in August 2022 with one simple conviction: an ugly fruit is never a bad fruit. At the workshop, surplus becomes jars, workshops and an invitation to taste differently.",
     },
     territory: {
       kicker: "L'Entre-Deux, the wild south",
       title: "A generous island, a village of makers.",
-      text: "Between ocean and cirque, L'Entre-Deux cultivates flavours and know-how. It's here, in Vavang'Art's “kaz à fabrik” (making house), that the workshop set down its jam pot.",
+      text: "Between ocean and cirque, L'Entre-Deux cultivates flavours and know-how. It's here, in the “kaz à fabrik” (making house) at 4A rue Fortuné Hoarau, that the workshop set down its jam pot.",
       cta: "Discover the land",
     },
     proof: {
@@ -216,15 +217,15 @@ export const en: Dictionary = {
     downloadCatalogue: "Download the catalogue PDF",
   },
   boutique: {
-    title: "The shop & workshop at Vavang'Art, L'Entre-Deux — hours & directions",
+    title: "The shop & workshop at 4A rue Fortuné Hoarau, L'Entre-Deux — hours & directions",
     description:
-      "La Gourmandise des Moches welcomes you at Vavang'Art, L'Entre-Deux, Tuesday to Sunday, 10 am–5 pm. Current jars, friendly advice and workshops.",
+      "La Gourmandise des Moches welcomes you at 4A rue Fortuné Hoarau, L'Entre-Deux, Sunday to Friday, 9 am–5 pm. Current jars, friendly advice and workshops.",
     kicker: "Shop & workshop",
-    h1: "The little jar house of Vavang'Art.",
+    h1: "The little jar house of L'Entre-Deux.",
     sub: "A living workshop-boutique in the artisan village of L'Entre-Deux. Walk in curious, walk out hungry for more.",
     visitTitle: "Come and see us",
     visitText:
-      "The shop is part of Vavang'Art, L'Entre-Deux's artisan village. Take the time to wander between the makers' studios on site.",
+      "The shop sits at 4A rue Fortuné Hoarau, in the heart of L'Entre-Deux's artisan village. Take the time to wander between the makers' studios nearby.",
     whatTitle: "What you'll find",
     whatItems: [
       "The jars of the moment: jams, syrups, pickles, chutneys, compotes, nectars, soups, ketchup and sauces…",
@@ -238,7 +239,7 @@ export const en: Dictionary = {
     },
     mapCta: "Show the map",
     mapLoading: "Loading the map…",
-    mapTitle: "Map: La Gourmandise des Moches, Vavang'Art, L'Entre-Deux",
+    mapTitle: "Map: La Gourmandise des Moches, 4A rue Fortuné Hoarau, L'Entre-Deux",
     imperative: "Check our socials for announcements (exceptional closures, special batches).",
   },
   demarche: {
@@ -260,7 +261,7 @@ export const en: Dictionary = {
       },
       {
         title: "3 · Transformation works the magic",
-        text: "At the Vavang'Art workshop, the “ugly ones” become jams, soups, nectars… Slow cooking, small batches, house recipes, nothing imported.",
+        text: "At the 4A rue Fortuné Hoarau workshop, the “ugly ones” become jams, soups, nectars… Slow cooking, small batches, house recipes, nothing imported.",
       },
       {
         title: "4 · The social side grows",
@@ -301,7 +302,7 @@ export const en: Dictionary = {
     ],
     whereTitle: "Where & when?",
     whereText:
-      "Workshops take place at the Vavang'Art workshop-shop or at our partners' venues — like Le Dimitile Hôtel & Spa ****, where we co-host jam workshops followed by a tasting.",
+      "Workshops take place at the 4A rue Fortuné Hoarau workshop-shop or at our partners' venues — like Le Dimitile Hôtel & Spa ****, where we co-host jam workshops followed by a tasting.",
     infoItems: [
       "Duration: 2 hours",
       "Free for children under 10",
@@ -332,10 +333,10 @@ export const en: Dictionary = {
     ],
     landTitle: "L'Entre-Deux, between sea and mountain",
     landText:
-      "Nestled in the wild south, between volcano and ocean, the village of L'Entre-Deux is a land of culture — of fruits, flowers and know-how. It's home to Vavang'Art, the artisans' village where the workshop settled, in the “kaz à fabrik” (making house).",
+      "Nestled in the wild south, between volcano and ocean, the village of L'Entre-Deux is a land of culture — of fruits, flowers and know-how. It's here, in the “kaz à fabrik” (making house) at 4A rue Fortuné Hoarau, that the workshop settled.",
     landPoints: [
       "Wild south: a generous volcanic terroir",
-      "Vavang'Art: a village of artisans and creators",
+      "L'Entre-Deux: a village of artisans and creators",
       "Réunion: one island, a thousand fruit seasons",
     ],
     joinTitle: "Join the rescue chain",
@@ -345,7 +346,7 @@ export const en: Dictionary = {
   histoire: {
     title: "Our story — Sandra Ramaye & La Gourmandise des Moches",
     description:
-      "From hating food waste to the Vavang'Art association: the story of Sandra Ramaye and La Gourmandise des Moches, founded in 2022 on Réunion Island.",
+      "From hating food waste to the L'Entre-Deux association: the story of Sandra Ramaye and La Gourmandise des Moches, founded in 2022 on Réunion Island.",
     kicker: "Our story",
     h1: "Once upon a time, there was fruit nobody wanted.",
     sub: "And a jam-maker who decided it wasn't an ending, but a beginning.",
@@ -363,8 +364,8 @@ export const en: Dictionary = {
         text: "Registered on 29 August 2022, La Gourmandise des Moches makes the mission official: fight food waste, favour short supply chains, and open paths to professional inclusion.",
       },
       {
-        title: "Vavang'Art, home",
-        text: "The workshop soon settles in L'Entre-Deux, in the Vavang'Art artisans' village. In 2025, it moves a few steps away into a larger space with a precious water point: the “kaz à fabrik”.",
+        title: "L'Entre-Deux, home",
+        text: "The workshop soon settles in L'Entre-Deux, in the heart of the artisans' village. In 2025, it moves a few steps away to 4A rue Fortuné Hoarau, into a larger space with a precious water point: the “kaz à fabrik”.",
       },
       {
         title: "Today — and tomorrow",
@@ -395,7 +396,7 @@ export const en: Dictionary = {
       { fr: "Sirops à partager (ou pas)", en: "Syrups to share (or not)" },
       { fr: "En cuisine, la découpe des moches", en: "In the kitchen, prepping the rescued" },
       { fr: "L'Entre-Deux, notre territoire", en: "L'Entre-Deux, our homeland" },
-      { fr: "La boutique de Vavang'Art", en: "The Vavang'Art boutique" },
+      { fr: "La boutique du 4A rue Fortuné Hoarau", en: "The 4A rue Fortuné Hoarau boutique" },
     ],
     followCta: "For everyday photos",
     followText: "Current batches, markets, workshop announcements: it all happens on our socials.",
@@ -403,7 +404,7 @@ export const en: Dictionary = {
   contact: {
     title: "Contact, hours & directions — La Gourmandise des Moches, L'Entre-Deux",
     description:
-      "Phone, email, opening hours and directions to La Gourmandise des Moches at Vavang'Art, L'Entre-Deux. Call for jars, workshops or partnerships.",
+      "Phone, email, opening hours and directions to La Gourmandise des Moches at 4A rue Fortuné Hoarau, L'Entre-Deux. Call for jars, workshops or partnerships.",
     kicker: "Contact & visit",
     h1: "We'll be waiting in L'Entre-Deux.",
     sub: "A call for a jar, an email for a partnership, a detour for pleasure: pick your door.",
@@ -461,6 +462,9 @@ export const en: Dictionary = {
       "Here we cook what the usual supply chains reject: spotted bananas, off-calibre vegetables, the day's unsold crates. The result is an inventive, generous, unmistakably island kitchen — 100% vegan, vegetarian and gluten-free — served at a single price so it stays open to everyone.",
     priceTitle: "One price, full stop",
     priceText: "Every meal costs the same. No endless menu, no surprise at the till.",
+    sorbetTitle: "The homemade sorbet",
+    sorbetText:
+      "To finish on a fresh note: our homemade sorbet, churned at the workshop from local fruit saved from waste. Vegan and gluten-free, like the rest of the menu — the flavours change with whatever gets rescued.",
     dishTitle: "An example dish",
     dishText:
       "The dish Sandra quoted to the press: a banana-peel curry with red lentils. Yes, the peels. And yes, it's delicious.",
@@ -471,6 +475,7 @@ export const en: Dictionary = {
     practicalItems: [
       "Lunchtime service, eat in or take away",
       "100% vegan, vegetarian and gluten-free cooking",
+      "Homemade vegan, gluten-free sorbet for dessert",
       "One single price for every meal",
       "At the entrance of L'Entre-Deux village",
     ],

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowRight, BadgeCheck, Info, Leaf, Phone, Recycle, ShoppingBasket, Sparkles, UtensilsCrossed,
+  ArrowRight, BadgeCheck, IceCreamBowl, Info, Leaf, Phone, Recycle, ShoppingBasket, Sparkles, UtensilsCrossed,
 } from "lucide-react";
 import { getDictionary, isLang, localizedPath, resolveLang } from "@/lib/i18n";
 import { BUSINESS } from "@/lib/data/business";
@@ -117,6 +117,45 @@ export default async function RestaurantPage({ params }: { params: Params }) {
                 </a>
               </div>
             </article>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Homemade sorbet — vegan & gluten-free dessert */}
+      <section className="bg-paper py-16 sm:py-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16 lg:px-8">
+          <Reveal>
+            <div className="-rotate-1 rounded-[2rem] border-2 border-ink bg-vanilla p-3 shadow-sticker">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] border-2 border-ink/15">
+                <Image
+                  src={IMAGES.sorbetMaison}
+                  alt={
+                    lang === "fr"
+                      ? "Coupe de sorbet maison aux fruits péi servie en terrasse"
+                      : "Glass of homemade local-fruit sorbet served on the terrace"
+                  }
+                  fill
+                  sizes="(min-width: 1024px) 44vw, 92vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={120}>
+            <Kicker>
+              <IceCreamBowl className="size-4" aria-hidden="true" />
+              {d.sorbetTitle}
+            </Kicker>
+            <h2 className="mt-5 font-display text-3xl font-black leading-tight tracking-tight text-balance sm:text-4xl">
+              {RESTAURANT.sorbet.name[lang]}
+            </h2>
+            <p className="mt-5 text-lg leading-relaxed text-ink-soft">{d.sorbetText}</p>
+            <p className="mt-5 inline-flex items-center gap-2 rounded-full border-2 border-ink bg-leaf-tint px-4 py-2 text-sm font-extrabold">
+              <Leaf className="size-4 text-leaf" aria-hidden="true" />
+              {RESTAURANT.diet.label[lang]}
+            </p>
+            <p className="mt-5 text-base leading-relaxed text-ink-soft">{RESTAURANT.sorbet.note[lang]}</p>
           </Reveal>
         </div>
       </section>

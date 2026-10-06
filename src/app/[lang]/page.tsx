@@ -227,6 +227,28 @@ export default async function HomePage({ params }: { params: Params }) {
                 <p className="mt-1.5 text-cream/75">{RESTAURANT.signatureDish.note[lang]}</p>
               </div>
 
+              {/* Homemade sorbet — vegan & gluten-free dessert */}
+              <div className="mt-5 flex items-center gap-4 rounded-3xl border-2 border-dashed border-mango/70 bg-cream/5 p-4">
+                <div className="relative size-24 shrink-0 overflow-hidden rounded-2xl border-2 border-ink/20 sm:size-28">
+                  <Image
+                    src={IMAGES.sorbetMaison}
+                    alt={
+                      lang === "fr"
+                        ? "Coupe de sorbet maison aux fruits péi servie en terrasse"
+                        : "Glass of homemade local-fruit sorbet served on the terrace"
+                    }
+                    fill
+                    sizes="(min-width: 640px) 112px, 96px"
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="text-xs font-extrabold uppercase tracking-widest text-mango">{d.restaurant.sorbetKicker}</p>
+                  <p className="mt-2 font-display text-xl font-black text-cream">{RESTAURANT.sorbet.name[lang]}</p>
+                  <p className="mt-1.5 text-cream/75">{RESTAURANT.sorbet.note[lang]}</p>
+                </div>
+              </div>
+
               <p className="mt-6 text-sm font-semibold text-cream/60">{d.restaurant.menuNote}</p>
 
               <div className="mt-8 flex flex-col gap-3.5 sm:flex-row">
@@ -371,9 +393,9 @@ export default async function HomePage({ params }: { params: Params }) {
                   <MapPin className="size-4 text-tomato" aria-hidden="true" />
                   {d.boutique.addressTitle}
                 </p>
-                <p className="mt-1.5 font-display text-lg font-bold leading-snug">{BUSINESS.address.place}</p>
+                <p className="mt-1.5 font-display text-lg font-bold leading-snug">{BUSINESS.address.street}</p>
                 <p className="text-sm font-semibold text-ink-faint">
-                  {BUSINESS.address.street}, {BUSINESS.address.city}
+                  {BUSINESS.address.postalCode} {BUSINESS.address.city}
                 </p>
               </div>
             </div>

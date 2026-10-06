@@ -56,7 +56,7 @@ export function LazyMap({
             </span>
             <span className="font-display text-xl font-bold">{ctaLabel}</span>
             <span className="text-sm font-semibold text-ink-soft">
-              4A rue Fortuné Hoarau · Vavang&apos;Art · L&apos;Entre-Deux
+              4A rue Fortuné Hoarau · 97414 L&apos;Entre-Deux
             </span>
           </button>
         )}

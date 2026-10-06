@@ -10,7 +10,7 @@ export const fr = {
     tagline: "Moche dehors, merveilleux dedans.",
     defaultTitle: "La Gourmandise des Moches — Bocaux artisanaux anti-gaspillage à L'Entre-Deux, La Réunion",
     description:
-      "À L'Entre-Deux, La Gourmandise des Moches transforme les fruits et légumes péi « moches » en confitures, soupes, nectars et sirops artisanaux. Boutique-atelier à Vavang'Art, ouverte du mardi au dimanche.",
+      "À L'Entre-Deux, La Gourmandise des Moches transforme les fruits et légumes péi « moches » en confitures, soupes, nectars et sirops artisanaux. Boutique-atelier au 4A rue Fortuné Hoarau, ouverte du dimanche au vendredi.",
     keywords:
       "produits artisanaux Réunion, anti-gaspillage alimentaire Réunion, confiture artisanale Réunion, L'Entre-Deux, produits péi, circuits courts",
   },
@@ -94,7 +94,7 @@ export const fr = {
     heroD: "merveilleux.",
     heroSub:
       "Fondée en août 2022 par Sandra Ramaye, l'association sublime les fruits et légumes dits « moches ». Les invendus deviennent à la main des confitures, sirops, achards, chutneys, compotes, nectars, soupes, ketchup et autres sauces.",
-    heroHint: "Mar–Dim · 10h–17h · Vavang'Art",
+    heroHint: "Dim–Ven · 9h–17h · L'Entre-Deux",
     marquee: [
       "Mangues cabossées",
       "Bananes trop mûres",
@@ -116,7 +116,7 @@ export const fr = {
         },
         {
           title: "Transformé à la main",
-          text: "Épluchage, cuisson douce, mise en pot : tout se fait à l'atelier de Vavang'Art, avec des recettes créoles et innovantes, en petites cuvées et même dans des pots recyclés.",
+          text: "Épluchage, cuisson douce, mise en pot : tout se fait à l'atelier du 4A rue Fortuné Hoarau, avec des recettes créoles et innovantes, en petites cuvées et même dans des pots recyclés.",
         },
         {
           title: "Utile au territoire",
@@ -130,7 +130,7 @@ export const fr = {
       steps: [
         { title: "Le surplus", text: "Récoltes invendues ou déclassées chez les producteurs de l'île." },
         { title: "L'achat", text: "Nous rachetons au juste prix — adieu la benne à ordures." },
-        { title: "La transformation", text: "Tri, découpe, cuisson et mise en pot à Vavang'Art." },
+        { title: "La transformation", text: "Tri, découpe, cuisson et mise en pot à l'atelier." },
         { title: "La gourmandise", text: "Bocaux vendus à la boutique et la mission sociale avance." },
       ],
     },
@@ -148,6 +148,7 @@ export const fr = {
       priceLabel: "Prix unique",
       priceSuffix: "le repas",
       dishKicker: "Le plat qui résume tout",
+      sorbetKicker: "La douceur glacée",
       points: [
         { title: "100 % vegan, végétarien et sans gluten", text: "Toute la carte l'est : des assiettes généreuses, sans viande, sans gluten, pensées avec ce que la terre péi donne en trop." },
         { title: "Sur place ou à emporter", text: "Le midi, on s'installe au restaurant… ou on repart avec sa boîte." },
@@ -161,11 +162,11 @@ export const fr = {
     boutique: {
       kicker: "La boutique-atelier",
       title: "Venez voir où naissent les bocaux.",
-      text: "Au cœur de Vavang'Art, le village d'artisans de L'Entre-Deux, la boutique sent le sucre qui cuit et le fruit mûr. On y découvre les cuvées du moment, on discute sauvetage, et parfois on repart avec une recette.",
+      text: "Au cœur du village de L'Entre-Deux, au 4A rue Fortuné Hoarau, la boutique sent le sucre qui cuit et le fruit mûr. On y découvre les cuvées du moment, on discute sauvetage, et parfois on repart avec une recette.",
       points: [
         "Confitures, sirops, achards, chutneys, compotes, nectars, soupes, ketchup et sauces du moment",
         "Conseils et histoire de chaque bocal",
-        "Un lieu artisanal vivant, au milieu des créateurs de Vavang'Art",
+        "Un lieu artisanal vivant, au milieu des créateurs de L'Entre-Deux",
       ],
       hoursTitle: "Horaires",
       addressTitle: "Adresse",
@@ -176,12 +177,12 @@ export const fr = {
       title: "Sandra Ramaye, sauveuse de fruits.",
       quote:
         "« J'ai horreur du gaspillage alimentaire. Un fruit moche n'est jamais un mauvais fruit. »",
-      text: "Sandra Ramaye a fondé l'association en août 2022 avec une conviction simple : un fruit moche n'est jamais un mauvais fruit. À Vavang'Art, les invendus deviennent des bocaux, des ateliers et une invitation à savourer autrement.",
+      text: "Sandra Ramaye a fondé l'association en août 2022 avec une conviction simple : un fruit moche n'est jamais un mauvais fruit. À l'atelier, les invendus deviennent des bocaux, des ateliers et une invitation à savourer autrement.",
     },
     territory: {
       kicker: "L'Entre-Deux, Sud sauvage",
       title: "Une île généreuse, un village d'artisans.",
-      text: "Entre mer et cirque, L'Entre-Deux cultive les saveurs et les savoir-faire. C'est ici, dans la « kaz à fabrik » de Vavang'Art, que l'atelier a posé sa bassine à confiture.",
+      text: "Entre mer et cirque, L'Entre-Deux cultive les saveurs et les savoir-faire. C'est ici, dans la « kaz à fabrik » du 4A rue Fortuné Hoarau, que l'atelier a posé sa bassine à confiture.",
       cta: "Découvrir le territoire",
     },
     proof: {
@@ -216,15 +217,15 @@ export const fr = {
     downloadCatalogue: "Télécharger le catalogue PDF",
   },
   boutique: {
-    title: "La boutique-atelier à Vavang'Art, L'Entre-Deux — horaires & accès",
+    title: "La boutique-atelier au 4A rue Fortuné Hoarau, L'Entre-Deux — horaires & accès",
     description:
-      "La boutique de La Gourmandise des Moches vous accueille à Vavang'Art, L'Entre-Deux, du mardi au dimanche de 10h à 17h. Bocaux du moment, conseils et ateliers.",
+      "La boutique de La Gourmandise des Moches vous accueille au 4A rue Fortuné Hoarau, L'Entre-Deux, du dimanche au vendredi de 9h à 17h. Bocaux du moment, conseils et ateliers.",
     kicker: "Boutique & atelier",
-    h1: "La kaz à bocaux de Vavang'Art.",
+    h1: "La kaz à bocaux de L'Entre-Deux.",
     sub: "Une boutique-atelier vivante au cœur du village d'artisans de L'Entre-Deux. On y entre curieux, on en ressort gourmand.",
     visitTitle: "Venir nous voir",
     visitText:
-      "La boutique fait partie de Vavang'Art, le village d'artisans de L'Entre-Deux. Profitez-en pour flâner entre les ateliers de créateurs du site.",
+      "La boutique se trouve au 4A rue Fortuné Hoarau, au cœur du village d'artisans de L'Entre-Deux. Profitez-en pour flâner entre les ateliers de créateurs des environs.",
     whatTitle: "Ce que vous y trouverez",
     whatItems: [
       "Les bocaux du moment : confitures, soupes, compotes, nectars, sirops, ketchup de banane…",
@@ -238,7 +239,7 @@ export const fr = {
     },
     mapCta: "Afficher la carte",
     mapLoading: "Chargement de la carte…",
-    mapTitle: "Carte : La Gourmandise des Moches, Vavang'Art, L'Entre-Deux",
+    mapTitle: "Carte : La Gourmandise des Moches, 4A rue Fortuné Hoarau, L'Entre-Deux",
     imperative: "Pensez à vérifier nos réseaux pour les annonces (fermetures exceptionnelles, cuvées spéciales).",
   },
   demarche: {
@@ -260,7 +261,7 @@ export const fr = {
       },
       {
         title: "3 · La transformation fait la magie",
-        text: "À l'atelier de Vavang'Art, les moches deviennent confitures, soupes, nectars… Cuisson douce, petites séries, recettes maison, aucun produit importé.",
+        text: "À l'atelier du 4A rue Fortuné Hoarau, les moches deviennent confitures, soupes, nectars… Cuisson douce, petites séries, recettes maison, aucun produit importé.",
       },
       {
         title: "4 · Le terrain social avance",
@@ -301,7 +302,7 @@ export const fr = {
     ],
     whereTitle: "Où et quand ?",
     whereText:
-      "Les ateliers ont lieu à l'atelier-boutique de Vavang'Art ou chez nos partenaires — comme le Dimitile Hôtel & Spa ****, avec lequel nous animons des ateliers confiture suivis d'une dégustation.",
+      "Les ateliers ont lieu à l'atelier-boutique du 4A rue Fortuné Hoarau ou chez nos partenaires — comme le Dimitile Hôtel & Spa ****, avec lequel nous animons des ateliers confiture suivis d'une dégustation.",
     infoItems: [
       "Durée : 2 heures",
       "Gratuit pour les moins de 10 ans",
@@ -332,10 +333,10 @@ export const fr = {
     ],
     landTitle: "L'Entre-Deux, entre mer et montagne",
     landText:
-      "Niché dans le Sud sauvage, entre le volcan et l'océan, le village de L'Entre-Deux est une terre de culture — de fruits, de fleurs et de savoir-faire. C'est ici que se trouve Vavang'Art, le village d'artisans où l'atelier a élu domicile, dans la « kaz à fabrik ».",
+      "Niché dans le Sud sauvage, entre le volcan et l'océan, le village de L'Entre-Deux est une terre de culture — de fruits, de fleurs et de savoir-faire. C'est ici, dans la « kaz à fabrik » du 4A rue Fortuné Hoarau, que l'atelier a élu domicile.",
     landPoints: [
       "Sud sauvage : un terroir volcanique généreux",
-      "Vavang'Art : un village d'artisans et de créateurs",
+      "L'Entre-Deux : un village d'artisans et de créateurs",
       "La Réunion : une île, mille saisons de fruits",
     ],
     joinTitle: "Rejoindre la chaîne de sauvetage",
@@ -345,7 +346,7 @@ export const fr = {
   histoire: {
     title: "Notre histoire — Sandra Ramaye & La Gourmandise des Moches",
     description:
-      "De l'horreur du gaspillage à l'association de Vavang'Art : l'histoire de Sandra Ramaye et de La Gourmandise des Moches, née en 2022 à La Réunion.",
+      "De l'horreur du gaspillage à l'association de L'Entre-Deux : l'histoire de Sandra Ramaye et de La Gourmandise des Moches, née en 2022 à La Réunion.",
     kicker: "Notre histoire",
     h1: "Il était une fois des fruits que personne ne voulait.",
     sub: "Et une confiturière qui a décidé que ce n'était pas une fin, mais un début.",
@@ -363,8 +364,8 @@ export const fr = {
         text: "Déclarée le 29 août 2022, La Gourmandise des Moches officialise la mission : lutter contre le gaspillage, favoriser les circuits courts et ouvrir des chemins d'insertion professionnelle.",
       },
       {
-        title: "Vavang'Art, la maison",
-        text: "Très vite, l'atelier s'installe à L'Entre-Deux, dans le village d'artisans de Vavang'Art. En 2025, il déménage à quelques pas, dans un local plus grand avec le précieux point d'eau : la « kaz à fabrik ».",
+        title: "L'Entre-Deux, la maison",
+        text: "Très vite, l'atelier s'installe à L'Entre-Deux, au cœur du village d'artisans. En 2025, il déménage à quelques pas, au 4A rue Fortuné Hoarau, dans un local plus grand avec le précieux point d'eau : la « kaz à fabrik ».",
       },
       {
         title: "Aujourd'hui — et demain",
@@ -395,7 +396,7 @@ export const fr = {
       { fr: "Sirops à partager (ou pas)", en: "Syrups to share (or not)" },
       { fr: "En cuisine, la découpe des moches", en: "In the kitchen, prepping the rescued" },
       { fr: "L'Entre-Deux, notre territoire", en: "L'Entre-Deux, our homeland" },
-      { fr: "La boutique de Vavang'Art", en: "The Vavang'Art boutique" },
+      { fr: "La boutique du 4A rue Fortuné Hoarau", en: "The 4A rue Fortuné Hoarau boutique" },
     ],
     followCta: "Pour les photos du quotidien",
     followText: "Cuvées du moment, marchés, annonces d'ateliers : tout se passe sur nos réseaux.",
@@ -403,7 +404,7 @@ export const fr = {
   contact: {
     title: "Contact, horaires & accès — La Gourmandise des Moches, L'Entre-Deux",
     description:
-      "Téléphone, e-mail, horaires et plan d'accès de La Gourmandise des Moches à Vavang'Art, L'Entre-Deux. Appelez pour vos bocaux, ateliers ou partenariats.",
+      "Téléphone, e-mail, horaires et plan d'accès de La Gourmandise des Moches au 4A rue Fortuné Hoarau, L'Entre-Deux. Appelez pour vos bocaux, ateliers ou partenariats.",
     kicker: "Contact & visite",
     h1: "On vous attend à L'Entre-Deux.",
     sub: "Un appel pour un bocal, un mail pour un partenariat, un détour pour le plaisir : choisissez votre porte d'entrée.",
@@ -461,6 +462,9 @@ export const fr = {
       "Ici, on cuisine ce que les circuits classiques refusent : bananes tachées, légumes hors calibre, invendus du jour. Résultat : une cuisine 100 % vegan, végétarienne et sans gluten, inventive, généreuse et franchement péi, servie à prix unique pour rester accessible à tout le monde.",
     priceTitle: "Un prix, point final",
     priceText: "Tous les repas sont au même tarif. Pas de carte à rallonge, pas de mauvaise surprise à l'addition.",
+    sorbetTitle: "Le sorbet maison",
+    sorbetText:
+      "Pour finir le repas en fraîcheur : notre sorbet maison, une glace préparée à l'atelier avec les fruits péi sauvés du gâchis. Vegan et sans gluten, comme toute la carte — les parfums changent au rythme des sauvetages.",
     dishTitle: "Un exemple de plat",
     dishText:
       "Le plat cité par Sandra dans la presse : un carry de peaux de bananes aux lentilles corail. Oui, les épluchures. Et oui, c'est délicieux.",
@@ -471,6 +475,7 @@ export const fr = {
     practicalItems: [
       "Service le midi, sur place ou à emporter",
       "Cuisine 100 % vegan, végétarienne et sans gluten",
+      "Sorbet maison vegan et sans gluten en dessert",
       "Prix unique pour tous les repas",
       "À l'entrée du village de L'Entre-Deux",
     ],

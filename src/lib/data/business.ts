@@ -18,7 +18,6 @@ export const BUSINESS = {
   },
   address: {
     street: "4A rue Fortuné Hoarau",
-    place: "Vavang'Art",
     postalCode: "97414",
     city: "L'Entre-Deux",
     island: "La Réunion",
@@ -43,15 +42,15 @@ export const BUSINESS = {
   // Boutique opening hours used by the existing template; visitors are invited
   // to check social posts before travelling for exceptional closures.
   hours: {
-    closedDay: "Monday",
-    daysOpen: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    opens: "10:00",
+    closedDay: "Saturday",
+    daysOpen: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "09:00",
     closes: "17:00",
     display: {
-      fr: "Mardi – dimanche · 10h – 17h",
-      en: "Tuesday – Sunday · 10 am – 5 pm",
+      fr: "Dimanche – vendredi · 9h – 17h",
+      en: "Sunday – Friday · 9 am – 5 pm",
     },
-    closedDisplay: { fr: "Fermé le lundi", en: "Closed on Mondays" },
+    closedDisplay: { fr: "Fermé le samedi", en: "Closed on Saturdays" },
   },
   geo: { lat: -21.2339, lng: 55.4704 },
   maps: {

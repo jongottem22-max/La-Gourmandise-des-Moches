@@ -10,7 +10,7 @@ export function identityJsonLd(lang: Lang) {
   const dict = getDictionary(lang);
   const address = {
     "@type": "PostalAddress",
-    streetAddress: `${BUSINESS.address.street}, ${BUSINESS.address.place}`,
+    streetAddress: BUSINESS.address.street,
     postalCode: BUSINESS.address.postalCode,
     addressLocality: BUSINESS.address.city,
     addressRegion: BUSINESS.address.island,
@@ -41,7 +41,7 @@ export function identityJsonLd(lang: Lang) {
       "@context": "https://schema.org",
       "@type": "Store",
       "@id": absoluteUrl("/#boutique"),
-      name: `${BUSINESS.name} — ${BUSINESS.address.place}`,
+      name: `${BUSINESS.name} — ${BUSINESS.address.city}`,
       description: dict.meta.description,
       url: absoluteUrl(`/${lang}`),
       telephone: "+262692553572",

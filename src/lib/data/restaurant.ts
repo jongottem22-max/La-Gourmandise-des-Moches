@@ -34,6 +34,18 @@ export const RESTAURANT = {
   exactAddress: null as string | null,
   openingHours: null as string | null,
 
+  /** Homemade dessert confirmed by the business: sorbet / ice cream, vegan and gluten-free. */
+  sorbet: {
+    name: {
+      fr: "Sorbet maison, vegan et sans gluten",
+      en: "Homemade sorbet, vegan and gluten-free",
+    },
+    note: {
+      fr: "Notre glace maison, préparée avec les fruits péi sauvés du gâchis : 100 % vegan et sans gluten, comme toute la carte.",
+      en: "Our homemade ice cream, churned from rescued local fruit: 100% vegan and gluten-free, like everything else on the menu.",
+    },
+  },
+
   /** The only dish documented in the press — no invented menu items. */
   signatureDish: {
     name: {
