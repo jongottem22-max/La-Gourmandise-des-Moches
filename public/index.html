@@ -6,14 +6,46 @@
     so this small static page (copied to out/index.html) sends / to ./fr/.
     Relative links keep it working from the apex domain as well as from any
     GitHub Pages project sub-path.
+
+    It carries full Open Graph / Twitter metadata because link previews
+    (WhatsApp, Facebook, Messenger, iMessage, LinkedIn…) read THIS page when
+    someone shares the bare domain — they do not follow the redirect.
   -->
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="refresh" content="0; url=./fr/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex" />
-    <title>La Gourmandise des Moches — redirection…</title>
+    <meta name="robots" content="noindex, follow" />
+
+    <title>La Gourmandise des Moches — bocaux anti-gaspi à L'Entre-Deux, La Réunion</title>
+    <meta
+      name="description"
+      content="À L'Entre-Deux, La Gourmandise des Moches transforme les fruits et légumes péi « moches » en confitures, soupes, nectars et sirops artisanaux. Boutique-atelier et restaurant 100 % vegan au 4A rue Fortuné Hoarau."
+    />
     <link rel="canonical" href="https://gourmandisedesmoches.fr/fr/" />
+
+    <!-- Open Graph — what WhatsApp, Facebook & co. show in the link preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="La Gourmandise des Moches" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:url" content="https://gourmandisedesmoches.fr/fr/" />
+    <meta property="og:title" content="La Gourmandise des Moches — bocaux anti-gaspi à L'Entre-Deux" />
+    <meta
+      property="og:description"
+      content="Confitures, soupes, nectars et sirops artisanaux faits avec les fruits et légumes péi « moches ». Boutique-atelier et restaurant 100 % vegan, végétarien et sans gluten à L'Entre-Deux, La Réunion."
+    />
+    <meta property="og:image" content="https://gourmandisedesmoches.fr/images/hero-moches.jpg" />
+    <meta property="og:image:alt" content="Fruits et légumes péi « moches » sur une table en bois" />
+
+    <!-- Twitter/X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="La Gourmandise des Moches — bocaux anti-gaspi à L'Entre-Deux" />
+    <meta
+      name="twitter:description"
+      content="Confitures, soupes, nectars et sirops artisanaux faits avec les fruits et légumes péi « moches ». Boutique-atelier et restaurant à L'Entre-Deux, La Réunion."
+    />
+    <meta name="twitter:image" content="https://gourmandisedesmoches.fr/images/hero-moches.jpg" />
+
     <style>
       body { font-family: Georgia, "Times New Roman", serif; background: #fff8f5; color: #2b2118; display: grid; place-items: center; min-height: 90vh; margin: 0; }
       main { text-align: center; max-width: 34rem; padding: 1rem; }
