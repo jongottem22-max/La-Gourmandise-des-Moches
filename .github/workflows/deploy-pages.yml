@@ -1,21 +1,17 @@
 # Deploys the static export (out/) to GitHub Pages.
 #
-# Phase 1 (now): site at https://jongottem22-max.github.io/La-Gourmandise-des-Moches/
-#   → NEXT_PUBLIC_BASE_PATH=/La-Gourmandise-des-Moches (below).
-# Phase 2: once gourmandisedesmoches.fr DNS points to GitHub Pages (see
-#   README → "Domaine personnalisé"), set NEXT_PUBLIC_BASE_PATH to "" and add
-#   a public/CNAME file containing `gourmandisedesmoches.fr`, then push.
+# The site is served from the custom domain https://gourmandisedesmoches.fr
+#   → NEXT_PUBLIC_BASE_PATH is empty and public/CNAME carries the domain,
+#   which GitHub Pages picks up on deploy.
 #
 # NEXT_PUBLIC_SITE_URL always stays the final custom domain: canonical URLs,
-# sitemap and OG tags must reference the production origin, never the
-# temporary github.io sub-path.
+# sitemap and OG tags must reference the production origin.
 
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - arena/01a10cb8-la-gourmandise-des-moches
       - main
   workflow_dispatch:
 
@@ -33,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NEXT_PUBLIC_SITE_URL: https://gourmandisedesmoches.fr
-      NEXT_PUBLIC_BASE_PATH: /La-Gourmandise-des-Moches
+      NEXT_PUBLIC_BASE_PATH: ""
     steps:
       - uses: actions/checkout@v4
 
