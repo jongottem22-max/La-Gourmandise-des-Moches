@@ -75,7 +75,7 @@ export default async function HomePage({ params }: { params: Params }) {
               </li>
               <li className="inline-flex items-center gap-1.5 rounded-full bg-cream px-3.5 py-2 ring-1 ring-ink/10">
                 <MapPin className="size-4 text-tomato" aria-hidden="true" />
-                {BUSINESS.address.place} · {BUSINESS.address.city}
+                {BUSINESS.napLine[lang]}
               </li>
               <li className="inline-flex items-center gap-1.5 rounded-full bg-cream px-3.5 py-2 ring-1 ring-ink/10">
                 <Phone className="size-4 text-tomato" aria-hidden="true" />
