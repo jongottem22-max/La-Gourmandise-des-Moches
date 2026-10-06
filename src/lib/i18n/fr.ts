@@ -203,7 +203,7 @@ export const fr = {
     description:
       "Confitures de fruits moches, ketchup de banane, compotes, soupes, jus, nectars et sirops : les bocaux artisanaux de La Gourmandise des Moches, faits main à L'Entre-Deux.",
     kicker: "Nos gourmandises",
-    h1: "Des bocaux qui sentent bon l'île.",
+    h1: "La kaz à bocaux qui sentent bon l'île.",
     sub: "Chaque cuvée dépend des sauvetages du moment : voici les familles de produits de l'atelier. Pour savoir ce qu'il reste en rayon, un coup de fil suffit.",
     viewRecipes: "Voir les recettes de cette catégorie",
     seasonNote:
