@@ -23,6 +23,7 @@ import restaurantMeal from "@/assets/images/restaurant-meal.png";
 import restaurantPage from "@/assets/images/restaurant-page.png";
 import restaurantExterior from "@/assets/images/restaurant-exterior.png";
 import sorbetMaison from "@/assets/images/sorbet-maison.png";
+import sorbetsFeatured from "@/assets/images/sorbets-featured.jpg";
 import platMassaleBredes from "@/assets/images/plat-massale-bredes.jpg";
 import bringelleEpices from "@/assets/images/bringelle-epices.jpg";
 import workshopPoster from "@/assets/images/workshop-poster.jpg";
@@ -55,6 +56,7 @@ export const IMAGES = {
   restaurantPage,
   restaurantExterior,
   sorbetMaison,
+  sorbetsFeatured,
   platMassaleBredes,
   bringelleEpices,
   workshopPoster,

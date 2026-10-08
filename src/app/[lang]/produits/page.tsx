@@ -37,6 +37,7 @@ export default async function ProduitsPage({ params }: { params: Params }) {
     nectars: "nectars-compote",
     soupes: "soupes-achards",
     "ketchup-et-sauces": "condiments",
+    sorbets: "sorbets",
   };
 
   return (

@@ -126,6 +126,23 @@ export const PRODUCTS: Product[] = [
     examples: { fr: ["Ketchup banane pimenté", "Sauce coriandre", "Sauce roquette"], en: ["Spicy banana ketchup", "Coriander sauce", "Rocket sauce"] },
     accent: "tomato",
   },
+  {
+    slug: "sorbets",
+    image: IMAGES.sorbetsFeatured,
+    alt: same(
+      "Deux boules de sorbet maison, fraise-citron et ananas, dans un pot",
+      "Two scoops of homemade sorbet, strawberry-lemon and pineapple, in a tub",
+    ),
+    name: same("Sorbets", "Sorbets"),
+    category: same("Glacé", "Frozen"),
+    tagline: same("Les fruits sauvés passent au congélateur.", "Rescued fruit, straight to the freezer."),
+    description: same(
+      "Deux sorbets maison préparés avec les fruits de la saison : fraise-citron, vif et acidulé, et ananas, tout en douceur.",
+      "Two homemade sorbets made with the season's fruit: a bright, tangy strawberry-lemon and a mellow pineapple.",
+    ),
+    examples: { fr: ["Fraise-citron", "Ananas"], en: ["Strawberry & lemon", "Pineapple"] },
+    accent: "goyave",
+  },
 ];
 
 export const CATALOGUE_SECTIONS: CatalogueSection[] = [
@@ -199,6 +216,26 @@ export const CATALOGUE_SECTIONS: CatalogueSection[] = [
       { name: same("Achards citron", "Lemon pickles"), ingredients: same("Citron, oignon, huile de tournesol, vinaigre blanc, gingembre, ail, curcuma, gros sel, piment") },
     ],
   },
+  {
+    slug: "sorbets",
+    title: same("Nos sorbets", "Our sorbets"),
+    items: [
+      {
+        name: same("Sorbet fraise-citron", "Strawberry & lemon sorbet"),
+        ingredients: {
+          fr: "Fraise, citron, sucre, sirop de glucose, gomme de guar, gomme de xanthane",
+          en: "Strawberry, lemon, sugar, glucose syrup, guar gum, xanthan gum",
+        },
+      },
+      {
+        name: same("Sorbet ananas", "Pineapple sorbet"),
+        ingredients: {
+          fr: "Ananas, sucre, sirop de glucose, gomme de guar, gomme de xanthane, sel",
+          en: "Pineapple, sugar, glucose syrup, guar gum, xanthan gum, salt",
+        },
+      },
+    ],
+  },
 ];
 
 
@@ -243,6 +280,8 @@ const CATALOGUE_IMAGES_RAW: Record<string, string> = {
   'Soupe blettes': '/images/catalogue/soupe-blettes.jpg',
   'Soupe chouchou': '/images/catalogue/soupe-chouchou.jpg',
   'Achards citron': '/images/catalogue/achards-citron.jpg',
+  'Sorbet fraise-citron': '/images/catalogue/sorbet-fraise-citron.jpg',
+  'Sorbet ananas': '/images/catalogue/sorbet-ananas.jpg',
 };
 
 /**
