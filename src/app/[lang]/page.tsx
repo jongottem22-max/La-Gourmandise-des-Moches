@@ -203,6 +203,14 @@ export default async function HomePage({ params }: { params: Params }) {
               </h2>
               <p className="mt-5 max-w-xl text-lg leading-relaxed text-cream/85">{d.restaurant.lead}</p>
 
+              {/* Lunch service hours — confirmed by the business */}
+              <div className="mt-6 inline-flex flex-wrap items-center gap-x-3 gap-y-1 rounded-2xl border-2 border-mango/70 bg-cream/10 px-5 py-3">
+                <Clock3 className="size-5 shrink-0 text-mango" aria-hidden="true" />
+                <span className="text-xs font-extrabold uppercase tracking-widest text-mango">{d.restaurant.hoursLabel}</span>
+                <span className="font-display text-lg font-black text-cream">{RESTAURANT.lunchHours.display[lang]}</span>
+                <span className="text-sm font-semibold text-cream/60">{RESTAURANT.lunchHours.closedDisplay[lang]}</span>
+              </div>
+
               <ul className="mt-7 space-y-4">
                 {d.restaurant.points.map((point, i) => {
                   const Icon = [Salad, ShoppingBasket, Recycle][i];

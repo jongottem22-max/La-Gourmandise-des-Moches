@@ -147,13 +147,14 @@ export const en: Dictionary = {
       kicker: "The anti-waste restaurant",
       title: "At lunchtime, pull up a chair.",
       lead: "Sandra has opened her restaurant at the entrance of L'Entre-Deux village: a kitchen that is 100% vegan, vegetarian and gluten-free, built around the “ugly” fruit and vegetables saved from the bin.",
+      hoursLabel: "Lunch service",
       priceLabel: "One price",
       priceSuffix: "per meal",
       dishKicker: "The dish that says it all",
       sorbetKicker: "The frozen treat",
       points: [
         { title: "100% vegan, vegetarian and gluten-free", text: "Every plate is generous, meat-free and gluten-free, composed from whatever the island's growers have in surplus." },
-        { title: "Eat in or take away", text: "At lunchtime, sit down with us… or grab your box and go." },
+        { title: "Eat in or take away", text: "Lunch is served Sunday to Friday, 11.30 am to 3.30 pm: sit down with us… or grab your box and go." },
         { title: "Short circuit, all the way", text: "“All the money we earn goes straight back into the circuit”: producers paid, running costs and wages covered." },
       ],
       quote: "The whole menu is 100% vegan, vegetarian and gluten-free — cooked with the ‘ugly ones’.",
@@ -454,7 +455,7 @@ export const en: Dictionary = {
   restaurantPage: {
     title: "100% vegan, vegetarian and gluten-free anti-waste restaurant in L'Entre-Deux — €8 meals",
     description:
-      "The anti-waste restaurant of La Gourmandise des Moches in L'Entre-Deux: meals that are 100% vegan, vegetarian and gluten-free, at one single price (€8), lunchtime, eat in or take away, cooked with rescued island produce.",
+      "The anti-waste restaurant of La Gourmandise des Moches in L'Entre-Deux: meals that are 100% vegan, vegetarian and gluten-free, at one single price (€8), served Sunday to Friday from 11.30 am to 3.30 pm, eat in or take away, cooked with rescued island produce.",
     kicker: "The restaurant",
     h1: "The cuisine of the “ugly ones”, served hot.",
     sub: "At the entrance of L'Entre-Deux village, a restaurant that is 100% vegan, vegetarian and gluten-free — every plate is a win against food waste.",
@@ -473,15 +474,18 @@ export const en: Dictionary = {
     menuText:
       "The menu isn't fixed: it depends on what growers and market sellers need rescuing that week. That's what keeps it alive — and why the dish of the day is announced by phone and on our socials.",
     practicalTitle: "Practical info",
+    hoursTitle: "Service hours",
+    hoursText:
+      "Lunch is served Sunday to Friday, 11.30 am to 3.30 pm. Closed on Saturdays. Come before 3 pm to be sure of the dish of the day: when it's rescued, it's served — and when it's gone, it's gone.",
     practicalItems: [
-      "Lunchtime service, eat in or take away",
+      "Lunch Sunday to Friday, 11.30 am to 3.30 pm, eat in or take away",
       "100% vegan, vegetarian and gluten-free cooking",
       "Homemade vegan, gluten-free sorbet for dessert",
       "One single price for every meal",
       "At the entrance of L'Entre-Deux village",
     ],
     verifyNote:
-      "Exact address and opening days: the restaurant is brand new, so please call to confirm before making the trip.",
+      "The restaurant is brand new: for the exact address, or around public holidays, one call confirms everything before you make the trip.",
     modelTitle: "Why it matters",
     modelText:
       "The restaurant powers the whole approach: it buys surplus from producers, covers running costs and wages, and lets the association continue its inclusion work. Eating here keeps the loop turning.",

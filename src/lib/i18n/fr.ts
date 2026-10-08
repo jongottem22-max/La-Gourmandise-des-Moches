@@ -146,13 +146,14 @@ export const fr = {
       kicker: "Le restaurant anti-gaspi",
       title: "À midi, on passe à table.",
       lead: "Sandra a ouvert son restaurant à l'entrée du village de L'Entre-Deux : une cuisine 100 % vegan, végétarienne et sans gluten, préparée avec les fruits et légumes « moches » sauvés du gâchis.",
+      hoursLabel: "Service du midi",
       priceLabel: "Prix unique",
       priceSuffix: "le repas",
       dishKicker: "Le plat qui résume tout",
       sorbetKicker: "La douceur glacée",
       points: [
         { title: "100 % vegan, végétarien et sans gluten", text: "Toute la carte l'est : des assiettes généreuses, sans viande, sans gluten, pensées avec ce que la terre péi donne en trop." },
-        { title: "Sur place ou à emporter", text: "Le midi, on s'installe au restaurant… ou on repart avec sa boîte." },
+        { title: "Sur place ou à emporter", text: "Le service du midi est ouvert du dimanche au vendredi, de 11h30 à 15h30 : on s'installe au restaurant… ou on repart avec sa boîte." },
         { title: "Le circuit court, jusqu'au bout", text: "« Tout l'argent que nous gagnons repart dans le circuit » : producteurs payés, charges et salaires assurés." },
       ],
       quote: "Toute la carte est 100 % vegan, végétarienne et sans gluten — cuisinée avec les “moches”.",
@@ -454,7 +455,7 @@ export const fr = {
   restaurantPage: {
     title: "Restaurant anti-gaspi 100 % vegan, végétarien et sans gluten à L'Entre-Deux — repas à 8 €",
     description:
-      "Le restaurant anti-gaspillage de La Gourmandise des Moches à L'Entre-Deux : repas 100 % vegan, végétariens et sans gluten à prix unique (8 €), le midi sur place ou à emporter, cuisinés avec des produits péi sauvés.",
+      "Le restaurant anti-gaspillage de La Gourmandise des Moches à L'Entre-Deux : repas 100 % vegan, végétariens et sans gluten à prix unique (8 €), servis du dimanche au vendredi de 11h30 à 15h30, sur place ou à emporter, cuisinés avec des produits péi sauvés.",
     kicker: "Le restaurant",
     h1: "La cuisine des « moches », servie chaude.",
     sub: "À l'entrée du village de L'Entre-Deux, un restaurant 100 % vegan, végétarien et sans gluten — chaque assiette est une victoire contre le gaspillage.",
@@ -473,15 +474,18 @@ export const fr = {
     menuText:
       "Le menu n'est pas figé : il dépend de ce que les producteurs et bazardiers ont à sauver cette semaine. C'est ce qui le rend vivant — et c'est pourquoi le plat du jour s'annonce par téléphone et sur nos réseaux.",
     practicalTitle: "Infos pratiques",
+    hoursTitle: "Les horaires du service",
+    hoursText:
+      "Le déjeuner est servi du dimanche au vendredi, de 11h30 à 15h30. Fermé le samedi. Mieux vaut arriver avant 15h pour profiter du plat du jour : quand c'est sauvé, c'est servi — et quand c'est fini, c'est fini.",
     practicalItems: [
-      "Service le midi, sur place ou à emporter",
+      "Déjeuner du dimanche au vendredi, de 11h30 à 15h30, sur place ou à emporter",
       "Cuisine 100 % vegan, végétarienne et sans gluten",
       "Sorbet maison vegan et sans gluten en dessert",
       "Prix unique pour tous les repas",
       "À l'entrée du village de L'Entre-Deux",
     ],
     verifyNote:
-      "Adresse précise et jours d'ouverture : le restaurant étant tout récent, appelez-nous pour confirmer avant de vous déplacer.",
+      "Le restaurant est tout récent : pour l'adresse exacte ou en cas de jour férié, un appel confirme tout avant de vous déplacer.",
     modelTitle: "Pourquoi ça compte",
     modelText:
       "Le restaurant fait tourner toute la démarche : il achète les surplus aux producteurs, finance les charges et les salaires, et permet à l'association de continuer son travail d'insertion. Manger ici, c'est faire tourner la boucle.",

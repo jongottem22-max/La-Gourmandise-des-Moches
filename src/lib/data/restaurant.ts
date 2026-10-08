@@ -32,7 +32,17 @@ export const RESTAURANT = {
   },
   /** Fill in once confirmed by the business; null keeps the site honest. */
   exactAddress: null as string | null,
-  openingHours: null as string | null,
+  /** Lunch service — days and hours confirmed by the business (October 2026). */
+  lunchHours: {
+    daysOpen: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "11:30",
+    closes: "15:30",
+    display: {
+      fr: "Dimanche – vendredi · 11h30 – 15h30",
+      en: "Sunday – Friday · 11.30 am – 3.30 pm",
+    },
+    closedDisplay: { fr: "Fermé le samedi", en: "Closed on Saturdays" },
+  },
 
   /** Homemade dessert confirmed by the business: sorbet / ice cream, vegan and gluten-free. */
   sorbet: {

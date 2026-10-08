@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowRight, BadgeCheck, IceCreamBowl, Info, Leaf, Phone, Recycle, ShoppingBasket, Sparkles, UtensilsCrossed,
+  ArrowRight, BadgeCheck, Clock3, IceCreamBowl, Info, Leaf, Phone, Recycle, ShoppingBasket, Sparkles, UtensilsCrossed,
 } from "lucide-react";
 import { getDictionary, isLang, localizedPath, resolveLang } from "@/lib/i18n";
 import { BUSINESS } from "@/lib/data/business";
@@ -58,6 +58,21 @@ export default async function RestaurantPage({ params }: { params: Params }) {
                 <Leaf className="size-7 text-leaf" aria-hidden="true" />
                 <p className="mt-2 font-display text-xl font-black">{dict.home.restaurant.points[0].title}</p>
                 <p className="mt-1.5 text-sm font-semibold text-ink-soft">{dict.home.restaurant.points[0].text}</p>
+              </div>
+            </div>
+
+            {/* Lunch service hours — confirmed by the business */}
+            <div className="mt-4 rounded-3xl border-2 border-ink bg-paper p-5 shadow-sticker">
+              <div className="flex items-start gap-4">
+                <span className="grid size-12 shrink-0 place-items-center rounded-2xl border-2 border-ink bg-mango shadow-sticker">
+                  <Clock3 className="size-6 text-ink" aria-hidden="true" />
+                </span>
+                <div>
+                  <p className="text-xs font-extrabold uppercase tracking-widest text-ink-faint">{d.hoursTitle}</p>
+                  <p className="mt-1 font-display text-2xl font-black leading-tight">{RESTAURANT.lunchHours.display[lang]}</p>
+                  <p className="mt-1 text-sm font-bold text-tomato">{RESTAURANT.lunchHours.closedDisplay[lang]}</p>
+                  <p className="mt-2.5 text-sm leading-relaxed text-ink-soft">{d.hoursText}</p>
+                </div>
               </div>
             </div>
           </Reveal>
@@ -245,6 +260,12 @@ export default async function RestaurantPage({ params }: { params: Params }) {
           description: d.description,
           servesCuisine: lang === "fr" ? ["Vegan", "Végétarienne", "Sans gluten", "Réunionnaise"] : ["Vegan", "Vegetarian", "Gluten-free", "Réunionnais"],
           priceRange: "€",
+          openingHoursSpecification: RESTAURANT.lunchHours.daysOpen.map((day) => ({
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: `https://schema.org/${day}`,
+            opens: RESTAURANT.lunchHours.opens,
+            closes: RESTAURANT.lunchHours.closes,
+          })),
           telephone: "+262692553572",
           email: BUSINESS.email,
           image: absoluteUrl(IMAGES.restaurantPage.src),
