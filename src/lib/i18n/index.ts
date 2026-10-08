@@ -29,6 +29,7 @@ export const STATIC_ROUTES = [
   "territoire",
   "histoire",
   "galerie",
+  "adhesion",
   "contact",
   "mentions-legales",
   "confidentialite",
@@ -46,6 +47,7 @@ export type NavKey =
   | "territoire"
   | "histoire"
   | "galerie"
+  | "adhesion"
   | "contact";
 
 export const NAV_ROUTES: ReadonlyArray<{ route: StaticRoute; key: NavKey }> = [
@@ -56,6 +58,7 @@ export const NAV_ROUTES: ReadonlyArray<{ route: StaticRoute; key: NavKey }> = [
   { route: "ateliers", key: "ateliers" },
   { route: "territoire", key: "territoire" },
   { route: "histoire", key: "histoire" },
+  { route: "adhesion", key: "adhesion" },
   { route: "contact", key: "contact" },
 ];
 

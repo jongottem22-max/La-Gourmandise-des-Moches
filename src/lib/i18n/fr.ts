@@ -24,6 +24,7 @@ export const fr = {
     territoire: "Producteurs & territoire",
     histoire: "Notre histoire",
     galerie: "Galerie",
+    adhesion: "Adhérer",
     contact: "Contact",
     menu: "Menu",
     openMenu: "Ouvrir le menu",
@@ -586,6 +587,89 @@ export const fr = {
     title: "Page introuvable",
     text: "Cette page s'est peut-être fait transformer en compote. Revenons à l'accueil.",
   },
+  adhesionPage: {
+    title: "Adhérer à La Gourmandise des Moches — fiche d'adhésion & charte des bénévoles",
+    description:
+      "Adhésion gratuite à l'association La Gourmandise des Moches, à L'Entre-Deux : téléchargez la fiche d'adhésion RGPD et la charte d'engagement des bénévoles, puis rapportez-les à la boutique ou par e-mail.",
+    kicker: "Nous rejoindre",
+    h1: "Devenez membre de l'aventure.",
+    sub: "L'adhésion est gratuite. Elle vous relie à une association qui rachète les invendus aux agriculteurs péi, les transforme en bocaux et en repas, et en fait un outil d'insertion professionnelle.",
+    freeBadge: "Adhésion gratuite",
+    whyTitle: "Pourquoi adhérer ?",
+    whyItems: [
+      {
+        title: "Soutenir le sauvetage",
+        text: "Invendus rachetés aux agriculteurs péi, conserves en bocaux recyclés, repas préparés : votre adhésion fait vivre toute la chaîne.",
+      },
+      {
+        title: "Devenir bénévole, si vous voulez",
+        text: "Collecte, transformation, mise en bocaux, logistique, vente solidaire ou communication : vous indiquez sur la fiche le temps que vous pouvez donner. Rien d'obligatoire.",
+      },
+      {
+        title: "Profiter de la distribution solidaire",
+        text: "Les adhérents peuvent demander à bénéficier de la distribution des repas non vendus, selon les disponibilités du moment.",
+      },
+    ],
+    documentsTitle: "Les documents à télécharger",
+    documentsLead:
+      "La fiche d'adhésion suffit pour devenir membre. Si vous souhaitez donner un coup de main, la charte des bénévoles vient s'y ajouter : elle fixe le cadre légal et sanitaire de l'engagement, des deux côtés.",
+    documents: [
+      {
+        name: "Fiche d'adhésion",
+        description:
+          "Vos coordonnées, votre souhait d'être bénévole et le nombre d'heures envisagé, la distribution solidaire, un don libre facultatif, et votre consentement RGPD. À dater et signer.",
+        meta: "Pour tous les adhérents · PDF",
+        cta: "Télécharger la fiche d'adhésion",
+        file: "/documents/fiche-adhesion.pdf",
+      },
+      {
+        name: "Charte d'engagement des bénévoles",
+        description:
+          "Le cadre du bénévolat selon la loi 1901 : missions proposées, règles d'hygiène et de sécurité alimentaire, assurance, traçabilité, données personnelles, et liberté d'arrêter à tout moment.",
+        meta: "Pour les bénévoles · PDF",
+        cta: "Télécharger la charte",
+        file: "/documents/charte-engagement.pdf",
+      },
+    ],
+    stepsTitle: "Comment ça marche",
+    stepsItems: [
+      { title: "Téléchargez et imprimez", text: "La fiche d'adhésion pour tout le monde, la charte en plus si vous voulez être bénévole." },
+      { title: "Complétez et signez", text: "Quelques champs, une case RGPD à cocher, la date et votre signature. Comptez cinq minutes." },
+      { title: "Rapportez-les", text: "À la boutique du 4A rue Fortuné Hoarau pendant les heures d'ouverture, ou scannés par e-mail." },
+    ],
+    volunteerTitle: "Ce que dit la charte des bénévoles",
+    volunteerLead:
+      "Le bénévolat est libre, non rémunéré, sans lien de subordination, et peut s'interrompre à tout moment. La charte précise ce que chacun apporte.",
+    volunteerAssociation: "L'association s'engage à",
+    volunteerAssociationItems: [
+      "Fournir un environnement conforme aux normes d'hygiène et de sécurité alimentaire",
+      "Mettre à disposition tenues, gants et matériel adapté",
+      "Assurer la traçabilité des produits et le respect de la chaîne du froid",
+      "Souscrire une assurance responsabilité civile associative",
+      "Respecter la dignité, la confidentialité et l'intégrité des bénévoles",
+    ],
+    volunteerMember: "Le bénévole s'engage à",
+    volunteerMemberItems: [
+      "Respecter les règles d'hygiène et de sécurité transmises par l'association",
+      "Signaler immédiatement toute anomalie sanitaire",
+      "Ne pas manipuler de denrées en cas de symptômes incompatibles",
+      "Utiliser le matériel et les locaux selon les consignes",
+      "Prévenir en cas d'empêchement ou de difficulté",
+    ],
+    mealsNote:
+      "Les repas ou produits redistribués aux bénévoles proviennent uniquement des invendus non vendus. C'est une reconnaissance solidaire en nature, jamais une rémunération, et elle dépend des disponibilités.",
+    returnTitle: "Où déposer vos documents",
+    returnText:
+      "À la boutique-atelier pendant les heures d'ouverture, ou par e-mail en pièce jointe. Une question avant de vous lancer ? Un appel suffit.",
+    rgpdTitle: "Vos données personnelles",
+    rgpdText:
+      "Les informations recueillies servent uniquement à la gestion des adhésions et des activités de l'association. Elles sont conservées le temps de l'adhésion et ne sont jamais cédées à des tiers. Vous disposez d'un droit d'accès, de rectification et de suppression : écrivez-nous et c'est fait.",
+    rgpdLink: "Lire notre politique de confidentialité",
+    ctaTitle: "Prêt à nous rejoindre ?",
+    ctaText: "Appelez-nous, passez à la boutique ou envoyez vos documents complétés par e-mail — nous vous répondrons avec plaisir.",
+    printNote: "Pas d'imprimante ? Passez à la boutique : nous avons toujours des exemplaires papier sous le coude.",
+  },
+
 };
 
 export type Dictionary = typeof fr;

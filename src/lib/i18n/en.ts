@@ -25,6 +25,7 @@ export const en: Dictionary = {
     territoire: "Producers & land",
     histoire: "Our story",
     galerie: "Gallery",
+    adhesion: "Join us",
     contact: "Contact",
     menu: "Menu",
     openMenu: "Open menu",
@@ -586,5 +587,88 @@ export const en: Dictionary = {
     title: "Page not found",
     text: "This page may have been turned into compote. Let's head back home.",
   },
+  adhesionPage: {
+    title: "Join La Gourmandise des Moches — membership form & volunteer charter",
+    description:
+      "Free membership of La Gourmandise des Moches in L'Entre-Deux: download the GDPR membership form and the volunteer charter, then return them to the shop or by email.",
+    kicker: "Join us",
+    h1: "Become part of the adventure.",
+    sub: "Membership is free. It connects you to a non-profit that buys surplus from local growers, turns it into jars and meals, and makes it a tool for professional inclusion.",
+    freeBadge: "Free membership",
+    whyTitle: "Why join?",
+    whyItems: [
+      {
+        title: "Support the rescue",
+        text: "Surplus bought from local growers, preserves in recycled jars, meals cooked from unsold produce: your membership keeps the whole chain alive.",
+      },
+      {
+        title: "Volunteer, if you want to",
+        text: "Collection, cooking, jarring, logistics, solidarity sales or communication: the form asks how much time you could give. Nothing is compulsory.",
+      },
+      {
+        title: "Benefit from solidarity sharing",
+        text: "Members can ask to receive a share of the meals left unsold, depending on what is available.",
+      },
+    ],
+    documentsTitle: "Documents to download",
+    documentsLead:
+      "The membership form is all you need to join. If you'd like to lend a hand, the volunteer charter comes on top: it sets the legal and food-safety framework on both sides.",
+    documents: [
+      {
+        name: "Membership form",
+        description:
+          "Your contact details, whether you'd like to volunteer and for how many hours, solidarity meal sharing, an optional donation, and your GDPR consent. To be dated and signed.",
+        meta: "For all members · PDF",
+        cta: "Download the membership form",
+        file: "/documents/fiche-adhesion.pdf",
+      },
+      {
+        name: "Volunteer charter",
+        description:
+          "The framework for volunteering under French 1901 association law: possible missions, food hygiene and safety rules, insurance, traceability, personal data, and the freedom to stop at any time.",
+        meta: "For volunteers · PDF",
+        cta: "Download the charter",
+        file: "/documents/charte-engagement.pdf",
+      },
+    ],
+    stepsTitle: "How it works",
+    stepsItems: [
+      { title: "Download and print", text: "The membership form for everyone, plus the charter if you'd like to volunteer." },
+      { title: "Fill in and sign", text: "A few fields, a GDPR box to tick, the date and your signature. Five minutes, no more." },
+      { title: "Bring them back", text: "To the shop at 4A rue Fortuné Hoarau during opening hours, or scanned by email." },
+    ],
+    volunteerTitle: "What the volunteer charter says",
+    volunteerLead:
+      "Volunteering is free, unpaid, carries no relationship of subordination, and can stop at any moment. The charter sets out what each side brings.",
+    volunteerAssociation: "The association commits to",
+    volunteerAssociationItems: [
+      "Providing an environment that meets food hygiene and safety standards",
+      "Supplying workwear, gloves and suitable equipment",
+      "Ensuring product traceability and an unbroken cold chain",
+      "Holding public liability insurance for the association",
+      "Respecting the dignity, confidentiality and integrity of volunteers",
+    ],
+    volunteerMember: "The volunteer commits to",
+    volunteerMemberItems: [
+      "Following the hygiene and safety rules given by the association",
+      "Reporting any food-safety concern immediately",
+      "Not handling food when unwell or showing incompatible symptoms",
+      "Using equipment and premises as instructed",
+      "Letting us know about any difficulty or absence",
+    ],
+    mealsNote:
+      "Meals or products shared with volunteers come solely from unsold surplus. It is a gesture of solidarity in kind, never a payment, and it depends on availability.",
+    returnTitle: "Where to return your documents",
+    returnText:
+      "At the shop & workshop during opening hours, or by email as an attachment. A question before you start? Just call.",
+    rgpdTitle: "Your personal data",
+    rgpdText:
+      "The information collected is used solely to manage memberships and the association's activities. It is kept for the duration of your membership and never passed on to third parties. You have the right to access, correct or delete it: write to us and it's done.",
+    rgpdLink: "Read our privacy policy",
+    ctaTitle: "Ready to join us?",
+    ctaText: "Call us, drop by the shop or email your completed documents — we'll be glad to hear from you.",
+    printNote: "No printer? Drop by the shop: we always keep paper copies to hand.",
+  },
+
 };
 
