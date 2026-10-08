@@ -7,8 +7,8 @@ import localFont from "next/font/local";
 import { getDictionary, isLang, resolveLang, LOCALES, DEFAULT_LOCALE } from "@/lib/i18n";
 import { redirect } from "next/navigation";
 import { BUSINESS } from "@/lib/data/business";
-import { IMAGES } from "@/lib/assets";
 import { absoluteUrl, siteUrl } from "@/lib/utils";
+import { OG_IMAGE } from "@/lib/metadata";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Analytics } from "@/components/site/Analytics";
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: "La Gourmandise des Moches",
     type: "website",
-    images: [{ url: absoluteUrl(IMAGES.heroMoches.src), width: IMAGES.heroMoches.width, height: IMAGES.heroMoches.height }],
+    images: [{ url: absoluteUrl(OG_IMAGE.url), width: OG_IMAGE.width, height: OG_IMAGE.height, alt: OG_IMAGE.alt }],
   },
 };
 
