@@ -59,6 +59,28 @@ export default async function AteliersPage({ params }: { params: Params }) {
         </div>
       </section>
 
+      <section className="bg-paper py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <SectionHead kicker={d.kicker} title={d.formulasTitle} sub={d.formulasSub} tone="leaf" />
+          </Reveal>
+          <ul className="grid gap-6 md:grid-cols-3">
+            {d.formulas.map((item, i) => (
+              <Reveal as="li" key={item.title} delay={i * 120}>
+                <article className="lift flex h-full flex-col rounded-3xl border-2 border-ink bg-cream p-7 shadow-sticker">
+                  <span className="stamp self-start text-tomato">{item.badge}</span>
+                  <h3 className="mt-4 font-display text-2xl font-black">{item.title}</h3>
+                  <p className="mt-2.5 grow leading-relaxed text-ink-soft">{item.text}</p>
+                  <p className="mt-5 rounded-2xl border-2 border-ink/10 bg-vanilla px-4 py-3 text-sm font-bold text-ink">
+                    {item.price}
+                  </p>
+                </article>
+              </Reveal>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       <section className="torn-top torn-bottom torn-cream relative bg-cream pb-16 sm:pb-24">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pt-8 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
           <Reveal>
@@ -121,7 +143,7 @@ export default async function AteliersPage({ params }: { params: Params }) {
             <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-cream/80">{d.groupsText}</p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3.5 sm:flex-row">
               <Link href={localizedPath(lang, "contact")} className={btnSecondary} data-track="cta_click" data-track-label="ateliers-contact">
-                {dict.common.cta.contact}
+                {dict.common.cta.quote}
                 <ArrowRight className="size-5" aria-hidden="true" />
               </Link>
               <a href={BUSINESS.socials.instagram} target="_blank" rel="noopener noreferrer" className={btnGhostLight} data-track="social_click" data-track-label="instagram-ateliers">

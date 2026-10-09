@@ -41,6 +41,7 @@ export const fr = {
       call: "Appeler la boutique",
       directions: "Itinéraire",
       contact: "Nous contacter",
+      quote: "Demander un devis",
       instagram: "Suivre sur Instagram",
       facebook: "Suivre sur Facebook",
       support: "Soutenir l'association",
@@ -191,7 +192,7 @@ export const fr = {
       kicker: "Ils nous aiment déjà",
       title: "Des bocaux qui voyagent.",
       dimitile:
-        "Le Dimitile Hôtel & Spa **** propose nos créations à sa boutique et organise des ateliers confiture avec nous.",
+        "Le Dimitile Hôtel & Spa **** propose nos créations à sa boutique.",
       facebook: "100% d'avis favorables sur Facebook (8 avis)",
       instagram: "Les cuvées du moment s'annoncent sur Instagram",
     },
@@ -237,7 +238,7 @@ export const fr = {
     ],
     atelierTeaser: {
       title: "Et si vous mettiez la main à la confiture ?",
-      text: "Nous organisons aussi des ateliers pour apprendre à transformer vos propres fruits — comme ceux que nous animons avec le Dimitile Hôtel & Spa.",
+      text: "Nous organisons aussi des ateliers confiture ici même, à la boutique, pour apprendre à transformer vos propres fruits. Pour les groupes et les collectivités, nous nous déplaçons — sur devis.",
     },
     mapCta: "Afficher la carte",
     mapLoading: "Chargement de la carte…",
@@ -292,7 +293,7 @@ export const fr = {
   ateliers: {
     title: "Ateliers confiture à La Réunion — apprenez à sauver les fruits",
     description:
-      "Ateliers de confiture et de transformation anti-gaspillage animés par Sandra Ramaye à L'Entre-Deux et avec des partenaires comme le Dimitile Hôtel & Spa. Réservation par téléphone.",
+      "Atelier confiture pour les particuliers à la boutique du 4A rue Fortuné Hoarau, L'Entre-Deux. Atelier confiture avec déplacement et atelier cuisine anti-gaspillage pour les groupes et les collectivités, sur devis.",
     kicker: "Ateliers",
     h1: "Mettez la main à la confiture.",
     sub: "Sélection des fruits, découpe, cuisson, mise en pot : repartez avec votre propre création et les bons réflexes anti-gaspi.",
@@ -302,19 +303,42 @@ export const fr = {
       { title: "On cuisine ensemble", text: "Guidés pas à pas, vous composez votre recette — douceur, épices, audace." },
       { title: "On déguste et on met en pot", text: "Dégustation guidée des créations de l'atelier, puis chacun repart avec sa gourmandise." },
     ],
+    formulasTitle: "Nos formules",
+    formulasSub:
+      "L'atelier confiture pour les particuliers se déroule à la boutique. Pour venir jusqu'à vous ou animer un atelier cuisine anti-gaspillage, nous établissons un devis.",
+    formulas: [
+      {
+        badge: "Particuliers · à la boutique",
+        title: "Atelier confiture",
+        text: "Chez nous, au 4A rue Fortuné Hoarau : deux heures pour choisir les fruits sauvés, cuisiner ensemble et repartir avec son pot.",
+        price: "Tarif libre : minimum 5 € par personne",
+      },
+      {
+        badge: "Groupes & collectivités · sur devis",
+        title: "Atelier confiture avec déplacement",
+        text: "Nous venons chez vous avec le matériel, les fruits sauvés et la bassine à confiture. Écoles, centres de loisirs, associations, comités d'entreprise, communes.",
+        price: "Sur devis",
+      },
+      {
+        badge: "Groupes & collectivités · sur devis",
+        title: "Atelier cuisine anti-gaspillage",
+        text: "Cuisiner les épluchures, les fruits trop mûrs et les légumes cabossés : les gestes anti-gaspi expliqués et mis en pratique, chez vous ou à l'atelier.",
+        price: "Sur devis",
+      },
+    ],
     whereTitle: "Où et quand ?",
     whereText:
-      "Les ateliers ont lieu à l'atelier-boutique du 4A rue Fortuné Hoarau ou chez nos partenaires — comme le Dimitile Hôtel & Spa ****, avec lequel nous animons des ateliers confiture suivis d'une dégustation.",
+      "L'atelier confiture des particuliers a lieu à l'atelier-boutique du 4A rue Fortuné Hoarau, à L'Entre-Deux. Pour les groupes et les collectivités, nous nous déplaçons avec le matériel : demandez-nous un devis.",
     infoItems: [
       "Durée : 2 heures",
       "Gratuit pour les moins de 10 ans",
-      "Tarif unique libre : minimum 5 € par personne",
-      "Ateliers gourmands sur devis pour les groupes",
+      "À la boutique — tarif unique libre : minimum 5 € par personne",
+      "Avec déplacement ou atelier cuisine anti-gaspi : sur devis",
       "Réservation : 06 92 55 35 72", 
     ],
-    groupsTitle: "Groupes, écoles, structures",
+    groupsTitle: "Groupes, écoles, collectivités",
     groupsText:
-      "Centres de loisirs, écoles, associations, comités d'entreprise : écrivez-nous pour un atelier sur mesure autour du goût et de l'anti-gaspillage.",
+      "Centres de loisirs, écoles, associations, comités d'entreprise, communes et collectivités : écrivez-nous pour un atelier confiture chez vous ou un atelier cuisine anti-gaspillage sur mesure. Nous vous envoyons un devis.",
     bookNote:
       "La réservation se fait par téléphone ou par message sur nos réseaux — c'est simple, c'est humain, et ça nous arrange.",
     downloadFlyer: "Voir le flyer de l'atelier",
@@ -371,7 +395,7 @@ export const fr = {
       },
       {
         title: "Aujourd'hui — et demain",
-        text: "Boutique, bocaux, ateliers confiture, partenariats comme celui du Dimitile Hôtel & Spa… La suite s'écrit avec celles et ceux qui passent la porte, bocal en main.",
+        text: "Boutique, bocaux, ateliers confiture à la boutique, revendeurs partenaires comme le Dimitile Hôtel & Spa… La suite s'écrit avec celles et ceux qui passent la porte, bocal en main.",
       },
     ],
     quoteTitle: "Sa conviction",

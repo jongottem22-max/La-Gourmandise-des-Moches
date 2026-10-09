@@ -42,6 +42,7 @@ export const en: Dictionary = {
       call: "Call the shop",
       directions: "Get directions",
       contact: "Get in touch",
+      quote: "Request a quote",
       instagram: "Follow on Instagram",
       facebook: "Follow on Facebook",
       support: "Support the non-profit",
@@ -191,7 +192,7 @@ export const en: Dictionary = {
       kicker: "Loved already",
       title: "Jars that travel.",
       dimitile:
-        "Le Dimitile Hôtel & Spa **** stocks our creations in its boutique and co-hosts jam workshops with us.",
+        "Le Dimitile Hôtel & Spa **** stocks our creations in its boutique.",
       facebook: "100% recommended on Facebook (8 reviews)",
       instagram: "Fresh batches are announced on Instagram",
     },
@@ -237,7 +238,7 @@ export const en: Dictionary = {
     ],
     atelierTeaser: {
       title: "How about making jam yourself?",
-      text: "We also run workshops so you can learn to rescue your own fruit — like the ones we host with Le Dimitile Hôtel & Spa.",
+      text: "We also run jam workshops right here at the shop, so you can learn to rescue your own fruit. For groups and local authorities we travel to you — quote on request.",
     },
     mapCta: "Show the map",
     mapLoading: "Loading the map…",
@@ -292,7 +293,7 @@ export const en: Dictionary = {
   ateliers: {
     title: "Jam workshops in Réunion Island — learn to rescue fruit",
     description:
-      "Jam-making and anti-waste transformation workshops led by Sandra Ramaye in L'Entre-Deux and with partners like Le Dimitile Hôtel & Spa. Booking by phone.",
+      "Jam workshops for individuals at the shop, 4A rue Fortuné Hoarau, L'Entre-Deux. Jam workshops at your venue and anti-waste cooking workshops for groups and local authorities, quote on request.",
     kicker: "Workshops",
     h1: "Get your hands into jam.",
     sub: "Choosing fruit, chopping, cooking, jarring: leave with your own creation and the right anti-waste reflexes.",
@@ -302,19 +303,42 @@ export const en: Dictionary = {
       { title: "Cooking together", text: "Guided step by step, you compose your own recipe — sweetness, spices, boldness." },
       { title: "Tasting & jarring", text: "A guided tasting of the workshop's creations, then everyone leaves with their jar." },
     ],
+    formulasTitle: "Our formats",
+    formulasSub:
+      "The jam workshop for individuals takes place at the shop. To bring a workshop to your venue, or to run an anti-waste cooking workshop, we put together a quote.",
+    formulas: [
+      {
+        badge: "Individuals · at the shop",
+        title: "Jam workshop",
+        text: "Here at 4A rue Fortuné Hoarau: two hours to pick the rescued fruit, cook together and leave with your own jar.",
+        price: "Pay what you can: minimum €5 per person",
+      },
+      {
+        badge: "Groups & local authorities · quote",
+        title: "Jam workshop at your venue",
+        text: "We come to you with the equipment, the rescued fruit and the jam pot. Schools, leisure centres, associations, companies, town councils.",
+        price: "Quote on request",
+      },
+      {
+        badge: "Groups & local authorities · quote",
+        title: "Anti-waste cooking workshop",
+        text: "Cooking with peels, overripe fruit and bruised vegetables: the anti-waste reflexes explained and put into practice, at your venue or at the workshop.",
+        price: "Quote on request",
+      },
+    ],
     whereTitle: "Where & when?",
     whereText:
-      "Workshops take place at the 4A rue Fortuné Hoarau workshop-shop or at our partners' venues — like Le Dimitile Hôtel & Spa ****, where we co-host jam workshops followed by a tasting.",
+      "The jam workshop for individuals takes place at the workshop-shop, 4A rue Fortuné Hoarau, L'Entre-Deux. For groups and local authorities we travel to you with the equipment — just ask for a quote.",
     infoItems: [
       "Duration: 2 hours",
       "Free for children under 10",
-      "Pay what you can: minimum €5 per person",
-      "Gourmet workshops for groups: quote on request",
+      "At the shop — pay what you can: minimum €5 per person",
+      "At your venue, or anti-waste cooking workshop: quote on request",
       "Booking: +262 692 55 35 72", 
     ],
-    groupsTitle: "Groups, schools, organisations",
+    groupsTitle: "Groups, schools, local authorities",
     groupsText:
-      "Leisure centres, schools, associations, companies: write to us for a tailor-made workshop around taste and anti-waste.",
+      "Leisure centres, schools, associations, companies, town councils and local authorities: write to us for a jam workshop at your venue or a tailor-made anti-waste cooking workshop. We will send you a quote.",
     bookNote:
       "Booking is done by phone or via a message on our socials — simple, human, and it suits us fine.",
     downloadFlyer: "View the workshop flyer",
@@ -371,7 +395,7 @@ export const en: Dictionary = {
       },
       {
         title: "Today — and tomorrow",
-        text: "Shop, jars, jam workshops, partnerships like Le Dimitile Hôtel & Spa… The next chapter is written with everyone who walks through the door, jar in hand.",
+        text: "Shop, jars, jam workshops at the shop, stockists like Le Dimitile Hôtel & Spa… The next chapter is written with everyone who walks through the door, jar in hand.",
       },
     ],
     quoteTitle: "Her conviction",
