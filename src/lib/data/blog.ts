@@ -502,14 +502,14 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: { fr: "À réserver", en: "To book" }, value: { fr: "06 92 55 35 72 (plat du jour, table, atelier)", en: "+262 692 55 35 72 (dish of the day, table, workshop)" } },
     ],
     hero: {
-      image: IMAGES.entreDeux,
+      image: IMAGES.territoryDestination,
       alt: {
-        fr: "Vue du village créole de L'Entre-Deux entre les ravines",
-        en: "View of the Creole village of L'Entre-Deux between the ravines",
+        fr: "Panorama de L'Entre-Deux et des montagnes réunionnaises, Hauts du Sud",
+        en: "Panorama of L'Entre-Deux and the Réunion mountains, southern highlands",
       },
       caption: {
-        fr: "L'Entre-Deux, village créole entre les ravines du Bras de Cilaos et du Bras de la Plaine.",
-        en: "L'Entre-Deux, Creole village between the Bras de Cilaos and Bras de la Plaine ravines.",
+        fr: "L'Entre-Deux, entre les ravines du Bras de Cilaos et du Bras de la Plaine.",
+        en: "L'Entre-Deux, between the Bras de Cilaos and Bras de la Plaine ravines.",
       },
     },
     body: [
