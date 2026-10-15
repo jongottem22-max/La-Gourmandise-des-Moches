@@ -3,13 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight, BadgeCheck, Clock3, HandCoins, HeartHandshake, MapPin, Phone,
-  BookOpenText, Recycle, Salad, ShoppingBasket, Sparkles, Sprout, Star, UtensilsCrossed,
+  Recycle, Salad, ShoppingBasket, Sparkles, Sprout, Star, UtensilsCrossed,
 } from "lucide-react";
 import { getDictionary, isLang, localizedPath, resolveLang } from "@/lib/i18n";
 import { BUSINESS } from "@/lib/data/business";
 import { PRODUCTS } from "@/lib/data/products";
 import { RESTAURANT } from "@/lib/data/restaurant";
-import { BLOG_POSTS } from "@/lib/data/blog";
 import { IMAGES } from "@/lib/assets";
 import { pageMetadata } from "@/lib/metadata";
 import { Reveal } from "@/components/site/Reveal";
@@ -459,61 +458,6 @@ export default async function HomePage({ params }: { params: Params }) {
                 </div>
               </div>
             </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ── Journal teaser (internal link to the blog) ────────────── */}
-      <section className="torn-top torn-bottom torn-cream relative bg-cream py-18 sm:py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 lg:px-8">
-          <Reveal>
-            <Kicker>
-              <BookOpenText className="size-4" aria-hidden="true" />
-              {d.journal.kicker}
-            </Kicker>
-            <h2 className="mt-5 font-display text-3xl font-black leading-tight tracking-tight text-balance sm:text-4xl">
-              {d.journal.title}
-            </h2>
-            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">{d.journal.text}</p>
-            <div className="mt-8">
-              <Link
-                href={localizedPath(lang, "journal")}
-                className={btnLeaf}
-                data-track="cta_click"
-                data-track-label="home-journal"
-              >
-                {d.journal.cta}
-                <ArrowRight className="size-5" aria-hidden="true" />
-              </Link>
-            </div>
-          </Reveal>
-          <Reveal delay={120}>
-            <Link
-              href={`${localizedPath(lang, "journal")}/${BLOG_POSTS[0].slug}`}
-              className="lift group block rounded-[2rem] border-2 border-ink bg-vanilla p-3 shadow-sticker"
-              data-track="cta_click"
-              data-track-label="home-journal-article"
-            >
-              <div className="relative aspect-[16/10] overflow-hidden rounded-[1.5rem] border-2 border-ink/15">
-                <Image
-                  src={BLOG_POSTS[0].hero.image}
-                  alt={BLOG_POSTS[0].hero.alt[lang]}
-                  fill
-                  sizes="(min-width: 1024px) 38vw, 92vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                />
-              </div>
-              <div className="px-3 pt-4 pb-2">
-                <p className="stamp text-leaf">{d.journal.kicker}</p>
-                <p className="mt-3 font-display text-xl font-black leading-snug">{BLOG_POSTS[0].meta.title[lang]}</p>
-                <p className="mt-2 text-sm font-bold text-ink-soft">
-                  {d.journal.cta}
-                  <span aria-hidden="true" className="ml-1.5 inline-block transition-transform duration-300 group-hover:translate-x-1">
-                    →
-                  </span>
-                </p>
-              </div>
-            </Link>
           </Reveal>
         </div>
       </section>
