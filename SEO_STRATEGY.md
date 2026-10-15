@@ -48,6 +48,7 @@ Titles/metas target **one primary intent per page**; long-tail handled via H2s a
 | Contact | contact horaires accès Entre-Deux Réunion | contact, hours & directions Entre-Deux |
 | Journal (hub) | journal La Gourmandise des Moches, actualités anti-gaspi Réunion | Réunion food stories & anti-waste news |
 | Journal #1 — restaurant | restaurant L'Entre-Deux, où manger à L'Entre-Deux, restaurant vegan / sans gluten La Réunion, repas pas cher Réunion, restaurant anti-gaspi | restaurant L'Entre-Deux, where to eat L'Entre-Deux, vegan & gluten-free restaurant Réunion Island, cheap lunch Réunion, things to do L'Entre-Deux |
+| Journal #2 — tourisme | que faire à L'Entre-Deux, village créole Réunion, randonnée Dimitile, Bassin Sassa, pont du Bras de la Plaine, week-end Sud sauvage, Car Jaune | things to do in L'Entre-Deux, Creole village Réunion Island, Dimitile hike, Bassin Sassa, wild south weekend |
 
 ## 5. Editorial roadmap (CTA-bearing content; see CONTENT_GUIDE.md)
 Seasonal preserve announcements, producer portraits, anti-waste recipes (use-the-peel), Vavang'Art village news, workshop recaps — each with intent, keyword, internal links to /produits + /ateliers + CTA.
@@ -58,7 +59,12 @@ Seasonal preserve announcements, producer portraits, anti-waste recipes (use-the
 - **Article template** (`src/lib/data/blog.ts` + `BlogArticle` blocks): H1 with the money keyword, answer-first lead paragraph, « l'essentiel » fact box (hours/price/diet/phone — the data people search for), H2 outline, internal links to produits/boutique/ateliers/démarche/territoire, keyword tag list, FAQ block with FAQPage JSON-LD, "read next" links, conversion block (call · restaurant page · directions).
 - **Every article**: own canonical + fr/en/x-default hreflang in `pageMetadata` (`subPath`), `BlogPosting` JSON-LD linked to the Restaurant/Store/Organization entities, unique 60/155 title+meta, listed in `sitemap.xml` with per-locale alternates.
 - **Feed**: `/feed.xml` (FR) and `/feed.xml?lang=en`, auto-discovered via `<link rel="alternate" type="application/rss+xml">` — ready for Mailchimp/aggregators.
-- **Published**: #1 *Restaurant à L'Entre-Deux : vegan, sans gluten, 8 €* (`/fr/journal/restaurant-entre-deux-vegan-sans-gluten`) — targets the "restaurant L'Entre-Deux / où manger à L'Entre-Deux / restaurant vegan-sans gluten Réunion" cluster, the highest-intent local queries the brand can serve today.
+- **Published #1**: *Restaurant à L'Entre-Deux : vegan, sans gluten, 8 €* (`/fr/journal/restaurant-entre-deux-vegan-sans-gluten`) — the "restaurant L'Entre-Deux / où manger à L'Entre-Deux / restaurant vegan-sans gluten Réunion" cluster, the highest-intent local queries the brand can serve today.
+- **Published #2**: *Que faire à L'Entre-Deux ? Notre journée gourmande* (`/fr/journal/que-faire-a-l-entre-deux-une-journee-gourmande`) — captures discovery/tourism intent ("que faire à L'Entre-Deux", Dimitile, Bassin Sassa, village créole) and funnels it to the restaurant and the boutique; the two articles cross-link, forming the first topic cluster.
+
+## 5ter. Off-page (le levier non couvert par le code)
+
+Le pack local se joue sur la fiche Google, pas sur le HTML : voir **`LOCAL_SEO_KIT.md`** (NAP à copier-coller, catégories, description 750 caractères, posts, Q&R, liste photo, moteur d'avis, citations à aligner, mesures). Règle non négociable : NAP identique au site, nom réel de la fiche (pas de mots-clés ajoutés), aucun avis acheté.
 
 ## 6. Measurement
 First-party events (no cookies): CTA/tel/mail/map/social clicks, form submits, language switches; ready to plug Plausible/Matomo via env flag later. KPI targets: ≥ 60% branded-clicks to own site in 3 months (from 0%), calls from mobile SERP, workshop enquiries.

@@ -30,7 +30,7 @@ Publish **only** facts in RESEARCH_REPORT.md marked CURRENT. Prices, menu items,
 | 1 | Ketchup de banane : la star des bocaux moches | découverte produit | ketchup banane Réunion | Voir nos produits |
 | 2 | Que faire des écorces d'orange ? Nos réponses en pot | inspiration/recette | zéro déchet cuisine Réunion | Découvrir la démarche |
 | 3 | Portrait : pourquoi nous rachetons les invendus aux producteurs péi | confiance/mission | circuits courts Réunion | Devenir producteur partenaire |
-| 4 | Un week-end gourmand à L'Entre-Deux | tourisme local | que faire Entre-Deux | Nous rendre visite |
+| ✅ | **Que faire à L'Entre-Deux ? Notre journée gourmande** (publié — `/fr/journal/que-faire-a-l-entre-deux-une-journee-gourmande`) | tourisme local | que faire à L'Entre-Deux | Appeler · Itinéraire · boutique |
 | 5 | Atelier confiture : repartez avec votre propre pot | conversion atelier | atelier confiture Réunion | Réserver un atelier |
 | 6 | Un fruit moche, c'est quoi au juste ? | éducation/EN adapté | ugly fruit food waste | Soutenir l'association |
 

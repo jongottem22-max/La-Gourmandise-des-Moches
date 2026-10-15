@@ -107,6 +107,7 @@ scripts/            prepare-images.mjs (vérification SHA-256 des images)
 | `TECHNICAL_ARCHITECTURE.md`   | Choix techniques (v1 serveur — voir note §0)  |
 | `CONTENT_GUIDE.md`            | Ton, contenus et éditorial                    |
 | `SEO_STRATEGY.md`             | Stratégie SEO (mots-clés, JSON-LD, sitemap)   |
+| `LOCAL_SEO_KIT.md`            | Kit Google Business Profile & citations locales |
 | `WEBSITE_QA_REPORT.md`        | Rapport qualité / recette du site             |
 | `RESEARCH_REPORT.md`          | Recherche initiale (concurrents, terrain)     |
 | `design-assets/SOURCES.md`    | Provenance des assets (dossier Google Drive)  |
