@@ -14,6 +14,7 @@ Publish **only** facts in RESEARCH_REPORT.md marked CURRENT. Prices, menu items,
 |---|---|---|
 | Address / phone / email / hours / socials | `src/lib/data/business.ts` | One file; auto-updates footer, contact, schema |
 | Product catalogue | `src/lib/data/products.ts` | Add/edit objects; FR + EN fields |
+| Journal articles (blog) | `src/lib/data/blog.ts` | Add a post object (`slug`, `meta`, `h1`, `lead`, `facts`, `hero`, `body` blocks, `faq`, `related`); FR + EN fields. UI labels for the hub/article live in `src/lib/i18n/*.ts` under `journal`. |
 | All UI strings/page copy FR | `src/lib/i18n/fr.ts` | Plain text |
 | All UI strings/page copy EN | `src/lib/i18n/en.ts` | Plain text, mirrored keys |
 | Contact messages received | Postgres `contact_messages` | Queried via dashboard SQL (see TECHNICAL doc) |
@@ -25,10 +26,11 @@ Publish **only** facts in RESEARCH_REPORT.md marked CURRENT. Prices, menu items,
 ## 5. Editorial strategy for future posts (Notre livre de recettes / Journal)
 | # | Proposed title (FR) | Intent | Primary keyword | CTA |
 |---|---|---|---|---|
+| ✅ | **Restaurant à L'Entre-Deux : vegan, sans gluten, 8 €** (publié — `/fr/journal/restaurant-entre-deux-vegan-sans-gluten`) | local/conversion | restaurant L'Entre-Deux | Appeler · Itinéraire · produits |
 | 1 | Ketchup de banane : la star des bocaux moches | découverte produit | ketchup banane Réunion | Voir nos produits |
 | 2 | Que faire des écorces d'orange ? Nos réponses en pot | inspiration/recette | zéro déchet cuisine Réunion | Découvrir la démarche |
 | 3 | Portrait : pourquoi nous rachetons les invendus aux producteurs péi | confiance/mission | circuits courts Réunion | Devenir producteur partenaire |
-| 4 | Un week-end gourmand à L'Entre-Deux | tourisme local | que faire Entre-Deux | Nous rendre visite |
+| ✅ | **Que faire à L'Entre-Deux ? Notre journée gourmande** (publié — `/fr/journal/que-faire-a-l-entre-deux-une-journee-gourmande`) | tourisme local | que faire à L'Entre-Deux | Appeler · Itinéraire · boutique |
 | 5 | Atelier confiture : repartez avec votre propre pot | conversion atelier | atelier confiture Réunion | Réserver un atelier |
 | 6 | Un fruit moche, c'est quoi au juste ? | éducation/EN adapté | ugly fruit food waste | Soutenir l'association |
 

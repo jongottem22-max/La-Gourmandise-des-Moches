@@ -25,7 +25,7 @@ Apply with `npx drizzle-kit push`.
 - `GET /api/health` — existing platform healthcheck.
 
 ## 5. SEO/Structured data layer
-`sitemap.ts`, `robots.ts`, `metadata` per page, `JsonLd` server component emitting Organization/Store/WebSite/ItemList/BreadcrumbList. `NEXT_PUBLIC_SITE_URL` env (default `https://lagourmandisedesmoches.re` — **[NEEDS VERIFICATION]** actual domain).
+`sitemap.ts`, `robots.ts`, `metadata` per page, `JsonLd` server component emitting Organization/Store/WebSite/ItemList/BreadcrumbList, plus Restaurant and — for the Journal — Blog/BlogPosting/FAQPage. `NEXT_PUBLIC_SITE_URL` env (default `https://gourmandisedesmoches.fr`, the production domain, matching the Pages workflow).
 
 ## 6. Media & performance
 The real JPEG binaries live primarily in `src/assets/images` and are statically imported through `src/lib/assets.ts`. Next.js fingerprints and emits all ten into `.next/static/media`, guaranteeing inclusion in every Netlify artifact. Byte-identical copies exist in `public/images` (direct-URL fallback) and `design-assets/images` (archive), plus **base64 text payloads in `design-assets/base64/`**: the `prebuild` hook (`scripts/prepare-images.mjs` → sha256-vs-`scripts/image-manifest.json`) reconstructs any binary lost in transit before compilation, so builds cannot fail on `Module not found` for images. `images.unoptimized: true` removes the runtime optimizer dependency; sources are already web-sized (≤ 400 KB), with explicit `sizes` and priority only on the hero. Torn-edge dividers & fruit doodles = inline SVG (no requests). Map: facade → lazy iframe on click. No third-party trackers.

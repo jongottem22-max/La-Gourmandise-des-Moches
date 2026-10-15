@@ -1,4 +1,8 @@
 {
+  "achards-featured.jpg": {
+    "sha256": "0b044cee3ddbb488dd69f6090c279cf16c2b570cbeb8c787fe1e298107d3ae54",
+    "bytes": 280301
+  },
   "atelier-mains.jpg": {
     "sha256": "6a951915d2be54b6664ba78050d8b674126b474b5bc7f25d3a95d8c80dceb487",
     "bytes": 203156
@@ -7,9 +11,17 @@
     "sha256": "6053a832ce26c7e1c14f4a8d6f247792942edcc38986e0f1442e2085f8dff3a4",
     "bytes": 368111
   },
+  "brand-logo.jpg": {
+    "sha256": "f90ecf9440c18d425a5962dc74b1010f2b69ede45f7952d690fc9dadf445a3a9",
+    "bytes": 9680
+  },
   "compotes.jpg": {
     "sha256": "0bc235414bfbde40e27d39bbde0f2838b5319df418f105ae5666e2f7fac4c4a1",
     "bytes": 166732
+  },
+  "confitures-featured.jpg": {
+    "sha256": "a6e9f804f4717e5e25411cf7b1f76a0655456604c9b7246c79e59f34b5f4abeb",
+    "bytes": 311341
   },
   "confitures.jpg": {
     "sha256": "2af8c49a571b3485b6f1eda9428842097e3feea3744c95a80afd69eaed5d92fa",
@@ -18,6 +30,18 @@
   "entre-deux.jpg": {
     "sha256": "8aa45e324f38536087e235d3e72bda284cbd3497619e566965353de9440dcedf",
     "bytes": 319854
+  },
+  "founder-kitchen.jpg": {
+    "sha256": "248fe8c618ca5f8ffc1d9cd2d84f0c162f160b871cc78bc3f5880c21bd2b4f01",
+    "bytes": 218468
+  },
+  "founder-market-web.jpg": {
+    "sha256": "287e976f18e2228b38f700c041e2a617ced99b03d29920495122f8b36a5bffb4",
+    "bytes": 225157
+  },
+  "hero-market.jpg": {
+    "sha256": "9e808336a33f975ed803bc70ca0e9955d23c3cd55f9b797b8c6df98ab86b2012",
+    "bytes": 377149
   },
   "hero-moches.jpg": {
     "sha256": "93f741af02a0161403df0077dad5a67dcbeb652515bc5c057b5608e4ab7d73a8",
@@ -31,12 +55,40 @@
     "sha256": "1cdad625566d0acc50941a7969f71c586f9ba09ef8c52be0a8c472702a79dd9b",
     "bytes": 215146
   },
+  "ketchup-sauces-featured.jpg": {
+    "sha256": "4f889d1b4ef05b90a3bf9a2bd1d5424dd06d7fca43ce4f3719c7986430d68a28",
+    "bytes": 222862
+  },
+  "restaurant-exterior.jpg": {
+    "sha256": "1616b8d3cf806a90813bd06468a7fde22d764cfaf6ff75ff6f5b42fa6489b9f8",
+    "bytes": 399446
+  },
+  "restaurant-meal.jpg": {
+    "sha256": "f74eaa94f87fcbb0b9deb5016f09f95d75c62c329cd22431466eae1d8fed3ddb",
+    "bytes": 319587
+  },
   "sirops.jpg": {
     "sha256": "e6fbd9f11acb9a163982992087053162715d1b4d586a944ca95109110cf0ed9e",
     "bytes": 201460
   },
+  "sorbet-maison.jpg": {
+    "sha256": "a0492356ff22b49645987cadb675a0ad9a40243b2b90fe7635281be2c1b506ab",
+    "bytes": 193388
+  },
+  "sorbets-featured-web.jpg": {
+    "sha256": "476c8860b9e000ceeee61c6936fff6d5b3281a8e2389b9b10353b4cc975d0fc6",
+    "bytes": 183082
+  },
   "soupes.jpg": {
     "sha256": "5b35e76b390e9ff8fb03151593bd15e466f01b141e9c805101ad7261c8773a1d",
     "bytes": 214690
+  },
+  "territory-destination.jpg": {
+    "sha256": "23dd35a856837969d279fe889866a731b7f1a33c2fad52e526e038e1f8717c2d",
+    "bytes": 440536
+  },
+  "workshop-poster-web.jpg": {
+    "sha256": "788e463a491e2cf110ca4ed0cdfa8105da3abfe419a1970a1916c3eb828cb2eb",
+    "bytes": 211514
   }
 }

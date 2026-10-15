@@ -49,6 +49,8 @@ export const metadata: Metadata = {
     type: "website",
     images: [{ url: absoluteUrl(OG_IMAGE.url), width: OG_IMAGE.width, height: OG_IMAGE.height, alt: OG_IMAGE.alt }],
   },
+  // Journal feed discovery (readers, aggregators, newsletter tools).
+  alternates: { types: { "application/rss+xml": absoluteUrl("/feed.xml") } },
 };
 
 export function generateStaticParams() {

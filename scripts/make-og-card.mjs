@@ -3,7 +3,8 @@
  * Builds the link-preview card used by WhatsApp, Facebook, Messenger, iMessage,
  * LinkedIn and X: the brand logo centred on a 1200x630 white canvas.
  *
- * Deterministic — it reads public/images/brand-logo.png and writes
+ * Deterministic — it reads public/images/brand-logo.jpg (the optimised twin
+ * of the supplied 500x500 PNG) and writes
  * public/images/og-logo.jpg. Re-run it whenever the logo changes:
  *
  *   node scripts/make-og-card.mjs
@@ -15,7 +16,7 @@ const HEIGHT = 630;
 const LOGO = 540;
 const WHITE = { r: 255, g: 255, b: 255, alpha: 1 };
 
-const logo = await sharp("public/images/brand-logo.png")
+const logo = await sharp("public/images/brand-logo.jpg")
   .resize(LOGO, LOGO, { fit: "contain", background: WHITE })
   .toBuffer();
 
