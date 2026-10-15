@@ -19,10 +19,14 @@ import founderMarket from "@/assets/images/founder-market.jpg";
 import heroMarket from "@/assets/images/hero-market.png";
 import founderKitchen from "@/assets/images/founder-kitchen.png";
 import photoDish from "@/assets/images/photo-dish.jpg";
-import restaurantMeal from "@/assets/images/restaurant-meal.png";
-import restaurantPage from "@/assets/images/restaurant-page.png";
-import restaurantExterior from "@/assets/images/restaurant-exterior.png";
-import sorbetMaison from "@/assets/images/sorbet-maison.png";
+// Web-optimised JPEG twins of the supplied documentary PNGs: same pixels, same
+// dimensions, roughly 8× lighter (3.3 MB PNG → ~320 KB JPEG). They are the files
+// every page serves; the PNG masters stay untouched in src/assets/images/ and
+// public/images/ and are registered in the asset pipeline (see
+// design-assets/IMAGE_ASSETS.md).
+import restaurantMeal from "@/assets/images/restaurant-meal.jpg";
+import restaurantExterior from "@/assets/images/restaurant-exterior.jpg";
+import sorbetMaison from "@/assets/images/sorbet-maison.jpg";
 import sorbetsFeatured from "@/assets/images/sorbets-featured.jpg";
 import platMassaleBredes from "@/assets/images/plat-massale-bredes.jpg";
 import bringelleEpices from "@/assets/images/bringelle-epices.jpg";
@@ -53,7 +57,9 @@ export const IMAGES = {
   founderKitchen,
   photoDish,
   restaurantMeal,
-  restaurantPage,
+  // restaurant-page.png is byte-identical to restaurant-meal.png (SOURCES.md),
+  // so both keys point at the same optimised file.
+  restaurantPage: restaurantMeal,
   restaurantExterior,
   sorbetMaison,
   sorbetsFeatured,

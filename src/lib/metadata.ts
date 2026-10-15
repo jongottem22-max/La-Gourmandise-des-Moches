@@ -14,12 +14,24 @@ export const OG_IMAGE = {
   alt: "La Gourmandise des Moches",
 } as const;
 
-/** Locale-aware metadata with canonical + hreflang alternates + OG. */
-export function pageMetadata(lang: Lang, route: StaticRoute | "", title: string, description: string): Metadata {
-  const canonical = absoluteUrl(localizedPath(lang, route));
+/**
+ * Locale-aware metadata with canonical + hreflang alternates + OG.
+ *
+ * `subPath` handles nested routes (e.g. a Journal article below /journal) so the
+ * canonical URL and the alternates point at the article itself, never its hub.
+ */
+export function pageMetadata(
+  lang: Lang,
+  route: StaticRoute | "",
+  title: string,
+  description: string,
+  subPath = "",
+): Metadata {
+  const path = (l: Lang) => `${localizedPath(l, route)}${subPath}`;
+  const canonical = absoluteUrl(path(lang));
   const languages = Object.fromEntries([
-    ...LOCALES.map((l) => [l, absoluteUrl(localizedPath(l, route))]),
-    ["x-default", absoluteUrl(localizedPath("fr", route))],
+    ...LOCALES.map((l) => [l, absoluteUrl(path(l))]),
+    ["x-default", absoluteUrl(path("fr"))],
   ]);
   return {
     title,

@@ -84,7 +84,7 @@ Variables d'environnement (injectées par le workflow, optionnelles en local) :
 
 ```
 src/
-  app/[lang]/       pages bilingues (produits, ateliers, restaurant, contact, …)
+  app/[lang]/       pages bilingues (produits, ateliers, restaurant, journal, contact, …)
   app/icon.svg      favicon   ·   robots.ts / sitemap.ts   ·   globals.css
   assets/images/    images compilées dans le bundle
   components/site/  composants React (Header, Footer, ProductCard, ContactChannels, …)

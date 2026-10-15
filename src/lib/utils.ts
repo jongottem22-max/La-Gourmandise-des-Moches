@@ -13,7 +13,7 @@ export function siteUrl(): string {
     process.env.NEXT_PUBLIC_SITE_URL ??
     process.env.URL ??
     process.env.DEPLOY_PRIME_URL ??
-    "https://lagourmandisedesmoches.re";
+    "https://gourmandisedesmoches.fr";
   return raw.replace(/\/$/, "");
 }
 

@@ -7,7 +7,7 @@
 | `src/assets/images/` | **Primary deployed set.** Every file is statically imported through `src/lib/assets.ts`; Next.js fingerprints and embeds the actual JPEG bytes in `.next/static/media` at build time. This is what the live pages use. |
 | `public/images/` | **Direct-file fallback.** Next.js copies `public/` verbatim into every proper build/deploy, preserving `/images/*.jpg` URLs for diagnostics or manual reuse. |
 | `design-assets/images/` | **Authoritative archival backup.** Restore either working set from here if a file is ever lost or corrupted. |
-| `design-assets/base64/` | **Text recovery set.** Base64 payloads of the same 10 files — pure text, so they survive upload channels that drop binaries. The `prebuild` hook (`scripts/prepare-images.mjs`) automatically reconstructs the three sets above from these before every build. |
+| `design-assets/base64/` | **Text recovery set.** Base64 payloads of the same 13 files — pure text, so they survive upload channels that drop binaries. The `prebuild` hook (`scripts/prepare-images.mjs`) automatically reconstructs the three sets above from these before every build. |
 
 ## Why the images persist on the host automatically
 
@@ -31,10 +31,10 @@ The `prebuild` hook restores all three binary sets from `design-assets/base64/` 
 ```bash
 node scripts/prepare-images.mjs          # verify + restore
 npm run check:images                     # verify only, non-zero exit on problems
-sha256sum -c design-assets/CHECKSUMS.sha256   # raw checksum verification (30 entries)
+sha256sum -c design-assets/CHECKSUMS.sha256   # raw checksum verification (39 entries)
 ```
 
-## Inventory (10 assets — all JPEG)
+## Inventory (13 assets — all JPEG)
 
 | File | Dims | Bytes | Used on | Purpose |
 |---|---|---|---|---|
@@ -48,8 +48,30 @@ sha256sum -c design-assets/CHECKSUMS.sha256   # raw checksum verification (30 en
 | atelier-mains.jpg | 1408×768 | 203 156 | Home, boutique, histoire, galerie | Hands preparing fruit in the workshop |
 | entre-deux.jpg | 768×1376 | 319 854 | Home, territoire, galerie | L'Entre-Deux landscape (portrait — cropped by CSS) |
 | boutique.jpg | 1408×768 | 368 111 | Home, galerie, Store JSON-LD | The Vavang'Art shop illustration |
+| restaurant-exterior.jpg | 1516×1038 | 399 446 | Journal (hero), home, restaurant | The restaurant, terrace and awning at the entrance of L'Entre-Deux |
+| restaurant-meal.jpg | 1086×1448 | 319 587 | Journal, restaurant, home | €8 anti-waste lunch served on the terrace |
+| sorbet-maison.jpg | 848×1264 | 193 388 | Journal, restaurant, home | Homemade vegan, gluten-free sorbet |
 
 All are **AI-generated illustrative visuals**, labelled *« visuel d'illustration »* on the site until the business supplies official photography (see RESEARCH_REPORT.md §4 and CONTENT_GUIDE.md §2).
+
+### Derived from the supplied documentary PNGs
+
+Three of the thirteen are **pixel-identical JPEG twins** of the documentary PNGs the
+association provided (`restaurant-exterior.png`, `restaurant-meal.png` — itself
+byte-identical to `restaurant-page.png` — and `sorbet-maison.png`). They keep the
+same dimensions and pixels but weigh ~8× less (3.3 MB → ~320 KB), which keeps the
+heaviest pages — the restaurant page and the Journal article — within a sane LCP
+budget. `src/lib/assets.ts` serves the JPEGs; the PNG masters are kept untouched
+in `src/assets/images/` and `public/images/` as the supplied originals.
+
+Regenerating them (only if a master is ever replaced):
+
+```bash
+convert src/assets/images/<master>.png -resize '1600x1600>' -strip \
+  -interlace Plane -sampling-factor 4:2:0 -quality 82 /tmp/<name>.jpg
+# then copy to the three sets, refresh design-assets/base64/<name>.b64,
+# scripts/image-manifest.json and design-assets/CHECKSUMS.sha256
+```
 
 ## Binary asset provenance
 

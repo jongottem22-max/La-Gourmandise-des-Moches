@@ -26,10 +26,13 @@
 | `/[lang]/ateliers` | Ateliers / Workshops | Réserver par téléphone |
 | `/[lang]/territoire` | Nos producteurs & le territoire / Producers & land | Devenir partenaire |
 | `/[lang]/histoire` | Notre histoire / Our story | Rencontrer Sandra → visite |
+| `/[lang]/restaurant` | Le restaurant / Restaurant | Appeler · Itinéraire (repas à 8 €, 100 % vegan & sans gluten) |
+| `/[lang]/journal` | Le Journal / Journal | Lire l'article à la une · Appeler |
+| `/[lang]/journal/[slug]` | Article (ex. restaurant anti-gaspi) | Appeler · Itinéraire · Lire la suite |
 | `/[lang]/galerie` | Galerie / Gallery | Suivre sur Instagram |
 | `/[lang]/contact` | Contact & venir / Contact & visit | Appeler · Itinéraire · Formulaire |
 
-Nav order: Produits · Boutique & Atelier · Démarche · Ateliers · Territoire · Histoire · Galerie · Contact (+ FR | EN).
+Nav order: Restaurant · Produits · Boutique & Atelier · Démarche · Ateliers · Journal · Territoire · Histoire · Adhérer · Contact (+ FR | EN).
 
 ## 4. Homepage wireframe
 1. **Hero** — display headline "La gourmandise des moches" + sub ("Des fruits et légumes péi trop beaux pour être jetés, transformés en gourmandises à L'Entre-Deux"), 2 CTAs (Produits / Visite), collage visual, NAP strip (hours, address) + marquee ribbon of produce names.

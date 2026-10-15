@@ -31,9 +31,21 @@
     "sha256": "1cdad625566d0acc50941a7969f71c586f9ba09ef8c52be0a8c472702a79dd9b",
     "bytes": 215146
   },
+  "restaurant-exterior.jpg": {
+    "sha256": "1616b8d3cf806a90813bd06468a7fde22d764cfaf6ff75ff6f5b42fa6489b9f8",
+    "bytes": 399446
+  },
+  "restaurant-meal.jpg": {
+    "sha256": "f74eaa94f87fcbb0b9deb5016f09f95d75c62c329cd22431466eae1d8fed3ddb",
+    "bytes": 319587
+  },
   "sirops.jpg": {
     "sha256": "e6fbd9f11acb9a163982992087053162715d1b4d586a944ca95109110cf0ed9e",
     "bytes": 201460
+  },
+  "sorbet-maison.jpg": {
+    "sha256": "a0492356ff22b49645987cadb675a0ad9a40243b2b90fe7635281be2c1b506ab",
+    "bytes": 193388
   },
   "soupes.jpg": {
     "sha256": "5b35e76b390e9ff8fb03151593bd15e466f01b141e9c805101ad7261c8773a1d",

@@ -1,5 +1,6 @@
 import { BUSINESS, type Lang } from "@/lib/data/business";
 import { IMAGES } from "@/lib/assets";
+import type { BlogPost } from "@/lib/data/blog";
 import { getDictionary, localizedPath, type StaticRoute } from "@/lib/i18n";
 import { absoluteUrl } from "@/lib/utils";
 
@@ -105,6 +106,77 @@ export function itemListJsonLd(
         url: absoluteUrl(e.url),
         brand: { "@type": "Brand", name: BUSINESS.name },
       },
+    })),
+  };
+}
+
+/**
+ * Journal (blog) structured data.
+ *
+ * `BlogPosting` carries the editorial metadata search engines and AI answers
+ * read (headline, dates, author, section), while `about` links the article to
+ * the Restaurant entity of the same domain so the two reinforce each other.
+ */
+export function blogPostingJsonLd(lang: Lang, post: BlogPost) {
+  const path = localizedPath(lang, "journal") + `/${post.slug}`;
+  const url = absoluteUrl(path);
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${url}#article`,
+    headline: post.meta.title[lang],
+    description: post.meta.description[lang],
+    inLanguage: lang,
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    datePublished: post.publishedAt,
+    dateModified: post.updatedAt ?? post.publishedAt,
+    author: { "@type": "Organization", "@id": absoluteUrl("/#organization"), name: BUSINESS.name },
+    publisher: { "@type": "Organization", "@id": absoluteUrl("/#organization"), name: BUSINESS.name },
+    image: [absoluteUrl(post.hero.image.src)],
+    articleSection: post.category[lang],
+    keywords: post.tags.map((tag) => tag[lang]).join(", "),
+    about: { "@type": "Restaurant", "@id": absoluteUrl("/#restaurant") },
+    mentions: { "@type": "Store", "@id": absoluteUrl("/#boutique") },
+    isPartOf: { "@type": "Blog", "@id": absoluteUrl(`${localizedPath(lang, "journal")}#blog`) },
+    locationCreated: {
+      "@type": "Place",
+      name: `${BUSINESS.address.city}, ${BUSINESS.address.island}`,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: BUSINESS.address.city,
+        postalCode: BUSINESS.address.postalCode,
+        addressRegion: BUSINESS.address.island,
+        addressCountry: BUSINESS.address.countryCode,
+      },
+    },
+  };
+}
+
+/** The Journal landing page, as a Blog entity listing its articles. */
+export function blogJsonLd(lang: Lang, posts: BlogPost[]) {
+  const url = absoluteUrl(localizedPath(lang, "journal"));
+  return {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${url}#blog`,
+    name: lang === "fr" ? `Le Journal — ${BUSINESS.name}` : `The Journal — ${BUSINESS.name}`,
+    url,
+    inLanguage: lang,
+    publisher: { "@type": "Organization", "@id": absoluteUrl("/#organization") },
+    blogPost: posts.map((post) => blogPostingJsonLd(lang, post)),
+  };
+}
+
+/** FAQ block: valid markup for answer engines even where rich results are limited. */
+export function faqJsonLd(entries: Array<{ q: string; a: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: entries.map((entry) => ({
+      "@type": "Question",
+      name: entry.q,
+      acceptedAnswer: { "@type": "Answer", text: entry.a },
     })),
   };
 }
