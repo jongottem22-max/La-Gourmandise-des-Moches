@@ -57,6 +57,7 @@ Seasonal preserve announcements, producer portraits, anti-waste recipes (use-the
 - **Hub**: `/{fr,en}/journal` — editorial promise, featured article, upcoming themes (no fake articles/dates), Blog JSON-LD, CTA to phone/directions.
 - **Article template** (`src/lib/data/blog.ts` + `BlogArticle` blocks): H1 with the money keyword, answer-first lead paragraph, « l'essentiel » fact box (hours/price/diet/phone — the data people search for), H2 outline, internal links to produits/boutique/ateliers/démarche/territoire, keyword tag list, FAQ block with FAQPage JSON-LD, "read next" links, conversion block (call · restaurant page · directions).
 - **Every article**: own canonical + fr/en/x-default hreflang in `pageMetadata` (`subPath`), `BlogPosting` JSON-LD linked to the Restaurant/Store/Organization entities, unique 60/155 title+meta, listed in `sitemap.xml` with per-locale alternates.
+- **Feed**: `/feed.xml` (FR) and `/feed.xml?lang=en`, auto-discovered via `<link rel="alternate" type="application/rss+xml">` — ready for Mailchimp/aggregators.
 - **Published**: #1 *Restaurant à L'Entre-Deux : vegan, sans gluten, 8 €* (`/fr/journal/restaurant-entre-deux-vegan-sans-gluten`) — targets the "restaurant L'Entre-Deux / où manger à L'Entre-Deux / restaurant vegan-sans gluten Réunion" cluster, the highest-intent local queries the brand can serve today.
 
 ## 6. Measurement
