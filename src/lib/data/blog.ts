@@ -502,14 +502,14 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: { fr: "À réserver", en: "To book" }, value: { fr: "06 92 55 35 72 (plat du jour, table, atelier)", en: "+262 692 55 35 72 (dish of the day, table, workshop)" } },
     ],
     hero: {
-      image: IMAGES.territoryDestination,
+      image: IMAGES.entreDeux,
       alt: {
-        fr: "Panorama de L'Entre-Deux et des montagnes réunionnaises, Hauts du Sud",
-        en: "Panorama of L'Entre-Deux and the Réunion mountains, southern highlands",
+        fr: "Vue du village créole de L'Entre-Deux entre les ravines",
+        en: "View of the Creole village of L'Entre-Deux between the ravines",
       },
       caption: {
-        fr: "L'Entre-Deux, entre les ravines du Bras de Cilaos et du Bras de la Plaine.",
-        en: "L'Entre-Deux, between the Bras de Cilaos and Bras de la Plaine ravines.",
+        fr: "L'Entre-Deux, village créole entre les ravines du Bras de Cilaos et du Bras de la Plaine.",
+        en: "L'Entre-Deux, Creole village between the Bras de Cilaos and Bras de la Plaine ravines.",
       },
     },
     body: [
@@ -801,7 +801,10 @@ export function getPost(slug: string): BlogPost | undefined {
 }
 
 export function getPostsByDate(): BlogPost[] {
-  return [...BLOG_POSTS].sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));
+  return [...BLOG_POSTS].sort((a, b) => {
+    if (a.publishedAt !== b.publishedAt) return a.publishedAt < b.publishedAt ? 1 : -1;
+    return a.slug.localeCompare(b.slug);
+  });
 }
 
 export const BLOG_SLUGS = BLOG_POSTS.map((post) => post.slug);

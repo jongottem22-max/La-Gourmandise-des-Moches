@@ -370,6 +370,9 @@ body {
   transform: translateY(-6px) rotate(-0.4deg);
   box-shadow: var(--shadow-lift);
 }
+.article-card{isolation:isolate;position:relative}
+header.sticky{z-index:40}
+
 @media (prefers-reduced-motion: reduce) {
   .lift,
   .lift:hover,

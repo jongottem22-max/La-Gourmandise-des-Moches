@@ -10,7 +10,6 @@ import jusNectars from "@/assets/images/jus-nectars.jpg";
 import sirops from "@/assets/images/sirops.jpg";
 import atelierMains from "@/assets/images/atelier-mains.jpg";
 import entreDeux from "@/assets/images/entre-deux.jpg";
-import territoryDestination from "@/assets/images/territory-destination.jpg";
 import boutique from "@/assets/images/boutique.jpg";
 
 // Official brand and documentary photos supplied by the association.
@@ -49,7 +48,6 @@ export const IMAGES = {
   sirops,
   atelierMains,
   entreDeux,
-  territoryDestination,
   boutique,
   brandLogo,
   founderMarket,
