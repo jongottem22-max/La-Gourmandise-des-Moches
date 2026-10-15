@@ -80,7 +80,7 @@ export function Header({ lang, nav, hoursLine }: HeaderProps) {
         aria-hidden="true"
         autoComplete="off"
       />
-      <header className="sticky top-0 z-50 border-b-2 border-ink/10 bg-cream">
+      <header className="sticky top-0 z-40 border-b-2 border-ink/10 bg-cream">
         <div aria-hidden="true" className="brand-gradient h-1.5" />
         <div className="site-header-bar">
           <Link

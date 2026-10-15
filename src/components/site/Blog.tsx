@@ -262,7 +262,7 @@ export function PostCard({
   return (
     <article
       className={cn(
-        "lift group h-full overflow-hidden rounded-[2rem] border-2 border-ink bg-paper shadow-sticker",
+        "article-card lift group h-full overflow-hidden rounded-[2rem] border-2 border-ink bg-paper shadow-sticker",
         featured && "lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch",
       )}
     >
@@ -272,7 +272,7 @@ export function PostCard({
           alt={post.hero.alt[lang]}
           fill
           sizes={featured ? "(min-width: 1024px) 46vw, 92vw" : "(min-width: 1024px) 32vw, 92vw"}
-          className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+          className="object-cover"
         />
         {featured && (
           <p className="absolute top-4 left-4 stamp bg-cream/95">

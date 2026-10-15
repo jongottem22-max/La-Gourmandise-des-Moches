@@ -537,13 +537,13 @@ export default async function HomePage({ params }: { params: Params }) {
             </Reveal>
             <Reveal delay={130}>
               <div className="rotate-1 rounded-[2rem] border-2 border-cream/60 p-3">
-                <div className="relative aspect-[16/9] overflow-hidden rounded-[1.5rem]">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem]">
                   <Image
-                    src={IMAGES.territoryDestination}
+                    src={IMAGES.entreDeux}
                     alt={
                       lang === "fr"
-                        ? "Vue panoramique de L'Entre-Deux et des montagnes réunionnaises"
-                        : "Panoramic view of L'Entre-Deux and Réunion's mountains"
+                        ? "Vue du village créole de L'Entre-Deux entre les ravines"
+                        : "View of the Creole village of L'Entre-Deux between the ravines"
                     }
                     fill
                     sizes="(min-width: 1024px) 46vw, 92vw"
